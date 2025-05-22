@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -8,9 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Ejercico 4.2
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Comando de Artisan para crear el modelo llamado Post.  
+![Ejemplo](./images/imagenesReadme/4-2_01.png)  
+  
+2. Crea el script Post.php en myblog/app/Models/Post.php
+![Ejemplo](./images/imagenesReadme/4-2_02.png)  
+  
+3. ¿Qué hace este modelo?  
+Laravel, por convención, asocia el modelo Post con la tabla posts en la base de datos.  
+No es necesario indicar el nombre de la tabla si sigo la convención (modelo en singular, tabla en plural). Pero si quiero hacerlo explícito, puedo agregar dentro del modelo:  
+![Ejemplo](./images/imagenesReadme/4-2_03.png)  
+  
+4. Si quiero indicar los campos asignables masivamente (por ejemplo, desde formularios), agrego la propiedad $fillable:  
+![Ejemplo](./images/imagenesReadme/4-2_04.png)  
+  Esto permite que pueda crear registros facilmente.  
+![Ejemplo](./images/imagenesReadme/4-2_05.png)  
+  
+5. Quedaría así:  
+![Ejemplo](./images/imagenesReadme/4-2_06.png)  
+  
+6. Yo lo dejo vacío.  
+![Ejemplo](./images/imagenesReadme/4-2_07.png)  
+
+
+
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
@@ -60,7 +82,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# PWA-LARAVEL
-TP 3 de PWA
->>>>>>> 9f4f0b1ae0e3c3d3ef47638d6cb3293692c41181
