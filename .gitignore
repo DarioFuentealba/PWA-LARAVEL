@@ -21,3 +21,55 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.*.php
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Laravel 7 y superior
+/.idea
+/.vscode
+/.phpunit.result.cache
+/.phpstorm.meta.php
+
+# Ignorar backups de bases de datos
+*.sql
+*.sqlite
+*.sqlite3
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar cachés
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Ignorar archivos compilados
+/public/js/*.js
+/public/css/*.css
+/public/mix-manifest.json
+
+# Composer y npm lock files (opcional subirlos o no)
+/composer.lock
+/package-lock.json
+
+# Ignorar archivos personales o de IDEs
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Archivos de pruebas
+/phpunit.xml
+phpunit.result.cache
