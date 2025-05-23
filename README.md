@@ -71,7 +71,67 @@ No es necesario indicar el nombre de la tabla si sigo la convención (modelo en 
   
 6. Yo lo dejo vacío.  
 ![Ejemplo](./images/imagenesReadme/4-2_07.png)  
+  
+    
+## Ejercico 4.3 - Uso de la base de datos  
+  
+1. En el ejercicio anterior cree el modelo Post - Ver puntos 1 y 2 del ejercicio 4.2.
+  
+2. Importo el modelo en el controlador.  
+![Ejemplo](./images/imagenesReadme/4-3_01.png)  
+  
+3. Modifico los métodos del controlador.  
+![Ejemplo](./images/imagenesReadme/4-3_02.png)  
+  
+4. Actualizo las vistas.  
+![Ejemplo](./images/imagenesReadme/4-3_03.png)  
+![Ejemplo](./images/imagenesReadme/4-3_04.png)  
+![Ejemplo](./images/imagenesReadme/4-3_05.png)  
+  
+5. Explico los cambios en la actualización de las vistas.
+![Ejemplo](./images/imagenesReadme/4-3_06.png)  
+  
+$posts = Post::all(); ---> Obtiene todos los registros de la tabla posts.  
+view('category.index', ..) ---> Carga la vista resources/views/category/index.blade.php  
+compact('posts') ---> Pasa la variable $posts a la vista.
+  
+Aquí se usa el modelo Post para acceder a la base de datos.  
+El método ::all() es un método de Eloquent (ORM de Laravel) que hace una consulta SELECT * FROM posts, es decir, trae todos los registros de la tabla posts.  
+El resultado es una colección de objetos de tipo Post.  
+  
+return view('category.index', compact('posts'));  
+Esta línea retorna una vista Blade llamada category/index.blade.php (la carpeta y el archivo).  
+compact('posts') es una forma corta de decir:  
+return view('category.index', ['posts' => $posts]);  
+Es decir, le estoy pasando la variable $posts a la vista, para que desde ahí pueda usarla y mostrar los datos.  
+  
+6. Sigo con la explicación de los cambios.  
+![Ejemplo](./images/imagenesReadme/4-3_07.png)  
+$id ---> Recibe el identificador del post.
+Post::findOrFail($id) ---> 	Busca el post por ID. Devuelve error 404 si no lo encuentra.  
+view('category.show', ...) ---> Muestra la vista category/show.blade.php con los datos del post.  
+compact('post') ---> Pasa la variable $post a la vista.  
+  
+public function getShow($id)
+Este es un método público llamado getShow, que espera un parámetro $id.
+$id representa el ID del post que quiero mostrar.
+Este método probablemente se asocia a la ruta category/show/{id}  
+  
+$post = Post::findOrFail($id);  
+Esta línea busca un registro en la base de datos con el ID que se recibió como parámetro.
+El método findOrFail($id) hace lo siguiente:  
+Intenta hacer SELECT * FROM posts WHERE id = $id LIMIT 1.  
+Si encuentra el post, lo devuelve como un objeto Post.  
+Si NO lo encuentra, Laravel lanza automáticamente un error 404 Not Found.  
+Esto es útil para no tener que comprobar manualmente si existe.  
+Por ejemplo: Si el ID que llega es 5, Laravel va a buscar el post con id = 5. Si existe, lo guarda en $post. Si no existe, devuelve error 404.  
 
+return view('category.show', compact('post'));  
+Esta línea carga la vista resources/views/category/show.blade.php.  
+Con compact('post') le paso el post encontrado a la vista.  
+Dentro de esa vista puedo acceder a $post->title, $post->content, etc., y mostrarlo.  
 
-
-
+7. ¿Qué pasa en la vista?  
+![Ejemplo](./images/imagenesReadme/4-3_06.png)  
+En la vista index.blade.php, tengo:  
+Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
