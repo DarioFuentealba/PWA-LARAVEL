@@ -132,6 +132,6 @@ Con compact('post') le paso el post encontrado a la vista.
 Dentro de esa vista puedo acceder a $post->title, $post->content, etc., y mostrarlo.  
 
 7. ¿Qué pasa en la vista?  
-![Ejemplo](./images/imagenesReadme/4-3_06.png)  
+![Ejemplo](./images/imagenesReadme/4-3_08.png)  
 En la vista index.blade.php, tengo:  
 Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
