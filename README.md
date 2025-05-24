@@ -47,6 +47,29 @@
     
 ## Ejercico 4.1 - Configuración de la base de datos y migraciones  
   
+1. Abrir Xampp y activar Apache y MySQL.  
+![Ejemplo](./images/imagenesReadme/4-1_01.png)  
+  
+2. Entrar a phpmyadmin y crear una base de datos llamada myblog.  
+![Ejemplo](./images/imagenesReadme/4-1_02.png)  
+  
+3. En VSC, dentro de myblog, ir a config/database.php.  
+![Ejemplo](./images/imagenesReadme/4-1_03.png)  
+   Por defecto se va a conectar a la base de datos sqlite, pero puedo conectarme a otra (mysql, mariadb, pgsql y sqlsrv). Yo voy a conectarme a mysql.  
+   Para esto voy al script env (myblog/.env) y busco DB_CONNECTION.    
+![Ejemplo](./images/imagenesReadme/4-1_04.png)  
+
+5. Debo colocar estos valores en el script .env.  
+![Ejemplo](./images/imagenesReadme/4-1_05.png)  
+  
+6. Para verificar la correcta conexión con la BD, voy a migrar la tablas de mi proyecto a la BD.  
+![Ejemplo](./images/imagenesReadme/4-1_06.png)  
+
+7. Voy a phpmyadmin y verifico que se crearon las tablas en mi BD.  
+![Ejemplo](./images/imagenesReadme/4-1_07.png)  
+  
+8. Si tira error, debo verificar que el cotejamiento que seleccioné al crear la BD sea el mismo que tengo en el script database.php  
+![Ejemplo](./images/imagenesReadme/4-1_08.png)  
     
 ## Ejercico 4.2  
   
