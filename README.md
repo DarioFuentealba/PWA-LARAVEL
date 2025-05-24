@@ -210,7 +210,9 @@
 7. Ejecuto el seeder y verifico en phpmyadmin que se cargaron los datos en la tabla users.  
 ![Ejemplo](./images/imagenesReadme/5-1_08.png)  
   
-
+  
+### Ahora veamos Tinker y Seeder.  
+  
    ### Tinker:
    Es una consola interactiva de Laravel basada en el REPL de PHP (PsySH). Permite ejecutar código PHP directamente dentro del entorno de Laravel.  
   
@@ -235,3 +237,7 @@
    Ideal para	            Pruebas rápidas	              Llenar base de datos inicial o en producción  
    Parte de despliegue	  No	                          Sí (se puede correr en servidores)  
   
+    
+## Ejercicio 5.2- Sistema de autenticación  
+  
+1. 
