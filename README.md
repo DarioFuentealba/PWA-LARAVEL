@@ -6,7 +6,7 @@
 # <p align="center">Programacion Web Avanzada</p>
   
   
-# <p align="center">PWA-REACT</p>  
+# <p align="center">PWA-LARAVEL</p>  
     
 <p align="center">
   <img src="./images/imagenesReadme/logo-UNCo.png" width="150" />
