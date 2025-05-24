@@ -176,3 +176,62 @@
 ![Ejemplo](./images/imagenesReadme/4-3_08.png)  
    En la vista index.blade.php, tengo:  
    Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
+  
+  
+## Ejercicio 5.1- Migración de la tabla usuarios  
+  
+1. Ejecutar el comando de Artisan que añade las nuevas migraciones.  
+   Yo omito este paso porque ya hice las migraciones anteriormente.  
+![Ejemplo](./images/imagenesReadme/4-1_06.png)  
+  
+2. compruebo con PHPMyAdmin que la tabla se ha creado correctamente con todos campos indicados.  
+![Ejemplo](./images/imagenesReadme/5-1_02.png)  
+  
+3. Rellenar la tabla users con los datos iniciales de prueba.  
+   Acá tengo 2 opciones, TINKER o SEEDER, voy a usar seeder.  
+   Luego de este paso coloco una explicación de cada uno.  
+  
+4. Decidí utilisar seeder, por lo tanto, corro el siguiente comando que me creará el script UsersTableSeeder.php en myblog\database\seeders\UsersTableSeeder.php.  
+![Ejemplo](./images/imagenesReadme/5-1_03.png)  
+  
+5. Edito el scrip para agregar usuarios, en mi caso, colocare 5.  
+  
+   El script original es el siguiente:  
+![Ejemplo](./images/imagenesReadme/5-1_04.png)  
+  
+   Lo modifico y queda así:  
+![Ejemplo](./images/imagenesReadme/5-1_05.png)  
+   Además de los usuarios, agregé las siguientes líneas:  
+![Ejemplo](./images/imagenesReadme/5-1_06.png)  
+  
+6. Ahora agrego el seeder al archivo principal.  
+![Ejemplo](./images/imagenesReadme/5-1_07.png)  
+  
+7. Ejecuto el seeder y verifico en phpmyadmin que se cargaron los datos en la tabla users.  
+![Ejemplo](./images/imagenesReadme/5-1_08.png)  
+  
+
+   ### Tinker:
+   Es una consola interactiva de Laravel basada en el REPL de PHP (PsySH). Permite ejecutar código PHP directamente dentro del entorno de Laravel.  
+  
+   Ventajas:
+   Ideal para probar código rápidamente.  
+   No requiere escribir archivos ni guardar nada.  
+   Muy útil en fase de desarrollo o depuración.  
+  
+   ### Seeder:  
+   s una clase PHP que define datos de prueba o iniciales para insertar automáticamente en la base de datos. Laravel ejecuta los seeders con el comando php artisan db:seed.
+  
+   Ventajas:  
+   Ideal para llenar la base de datos con datos repetibles y automatizados.  
+   Se puede versionar y compartir con el equipo.  
+   Muy útil cuando querés poblar varias tablas a la vez o preparar datos al desplegar la app.  
+  
+   ### Comparación directa  
+   Característica	        Tinker	                      Seeder  
+   Uso	                  Manual, interactivo	          Automático, programado  
+   Velocidad	            Muy rápido para una prueba	  Más lento pero repetible y reutilizable  
+   Persistencia	          No se guarda el código	      Se guarda como archivo en database/seeders  
+   Ideal para	            Pruebas rápidas	              Llenar base de datos inicial o en producción  
+   Parte de despliegue	  No	                          Sí (se puede correr en servidores)  
+  
