@@ -94,7 +94,7 @@
 1. Comando de Artisan para crear el modelo llamado Post.  
 ![Ejemplo](./images/imagenesReadme/4-2_01.png)  
   
-2. Crea el script Post.php en myblog/app/Models/Post.php
+2. Crea el script Post.php en myblog/app/Models/Post.php  
 ![Ejemplo](./images/imagenesReadme/4-2_02.png)  
   
 3. ¿Qué hace este modelo?  
@@ -240,4 +240,46 @@
     
 ## Ejercicio 5.2- Sistema de autenticación  
   
-1. 
+1. Completar el sistema de autenticación siguiendo el enlace: https://laravel.com/docs/12.x/starter-kits  
+![Ejemplo](./images/imagenesReadme/5-2_01.png)  
+  
+2. Debo instalar PHP y la herramienta Laravel CLI. Si ya tengo PHP y Composer instalados, puedo instalar la herramienta CLI del instalador de Laravel a través de Composer:  
+![Ejemplo](./images/imagenesReadme/5-2_02.png)  
+  
+3. Crear una nueva aplicación Laravel (yo ya la tengo creada, es myblog)  
+![Ejemplo](./images/imagenesReadme/5-2_03.png)  
+  
+4. Entro a la carpeta de mi app.  
+![Ejemplo](./images/imagenesReadme/5-2_04.png)  
+  
+5. Después de crear la aplicación Laravel, sólo tengo que instalar sus dependencias frontend a través de NPM e iniciar el servidor de desarrollo de Laravel.  
+  
+6. Uso npm install para instalar las dependencias de JavaScript listadas en mi archivo package.json (por ejemplo: Vite, Tailwind, Bootstrap, Vue, etc.), también crea o actualiza la carpeta node_modules/.  
+![Ejemplo](./images/imagenesReadme/5-2_05.png)  
+  
+7. Uso npm run build para compilar los assets (CSS, JS, imágenes) para producción usando Vite o Laravel Mix, dependiendo de mi configuración. Además crea archivos minificados en public/build/ o similar.  
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+  
+8. Una vez que haya iniciado el servidor de desarrollo de Laravel, la aplicación será accesible en el navegador web en http://localhost:8000.  
+![Ejemplo](./images/imagenesReadme/5-2_07.png)  
+  
+9. Hay 3 kits de inicio, React, Vue y Livewire, voy a utilizar el de React.  
+   El kit de inicio de React utiliza React 19, TypeScript, Tailwind, Inertia y el shadcn/ui biblioteca de componentes. Debo instalar shadcn/ui yo mismo, es una biblioteca moderna de componentes UI (inputs, botones, tabs, modales, etc.) hecha con Tailwind CSS, accesible, con buen diseño y extremadamente personalizable (los componentes se copian a tu proyecto)  
+  
+10. La instalación de shadcn/ui se hará con un nuevo proyecto y se podrá ver la documentación en https://ui.shadcn.com/docs/installation/laravel.  
+![Ejemplo](./images/imagenesReadme/5-2_08.png)  
+  
+11. sdsfgfhg
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+  
+12. sdfsgfh
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+  
+13. sdafshg
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+  
+14. sdafsgh
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+  
+15. dsafsghjj
+![Ejemplo](./images/imagenesReadme/5-2_06.png)  
