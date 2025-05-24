@@ -1,12 +1,30 @@
+
+
+# <p align="center">Universidad Nacional del Comahue</p>
+# <p align="center">Facultad de Informatica</p>
+  
+# <p align="center">Programacion Web Avanzada</p>
+  
+  
+# <p align="center">PWA-REACT</p>  
+    
+<p align="center">
+  <img src="./images/imagenesReadme/logo-UNCo.png" width="150" />
+  <img src="./images/imagenesReadme/logo-FAI.png" width="150" />
+</p>  
+    
+    
+## Integrantes: 
+  * Fuentes Camila FAI-4241  
+  * Fuentealba Dario FAI-4424  
+  * Riveiro Matías FAI-4438  
+    
+    
+    
+# <p align="center">Trabajo Práctico N° 3: Laravel</p>  
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
+  
 ## Ejercico 1- Instalación de Laravel. Definición de las rutas  
   
 ### Rutas del sitio web  
@@ -80,8 +98,8 @@
 ![Ejemplo](./images/imagenesReadme/4-2_02.png)  
   
 3. ¿Qué hace este modelo?  
-Laravel, por convención, asocia el modelo Post con la tabla posts en la base de datos.  
-No es necesario indicar el nombre de la tabla si sigo la convención (modelo en singular, tabla en plural). Pero si quiero hacerlo explícito, puedo agregar dentro del modelo:  
+   Laravel, por convención, asocia el modelo Post con la tabla posts en la base de datos.  
+   No es necesario indicar el nombre de la tabla si sigo la convención (modelo en singular, tabla en plural). Pero si quiero hacerlo explícito, puedo agregar dentro del modelo:  
 ![Ejemplo](./images/imagenesReadme/4-2_03.png)  
   
 4. Si quiero indicar los campos asignables masivamente (por ejemplo, desde formularios), agrego la propiedad $fillable:  
@@ -114,47 +132,47 @@ No es necesario indicar el nombre de la tabla si sigo la convención (modelo en 
 5. Explico los cambios en la actualización de las vistas.
 ![Ejemplo](./images/imagenesReadme/4-3_06.png)  
   
-$posts = Post::all(); ---> Obtiene todos los registros de la tabla posts.  
-view('category.index', ..) ---> Carga la vista resources/views/category/index.blade.php  
-compact('posts') ---> Pasa la variable $posts a la vista.
+   $posts = Post::all(); ---> Obtiene todos los registros de la tabla posts.  
+   view('category.index', ..) ---> Carga la vista resources/views/category/index.blade.php  
+   compact('posts') ---> Pasa la variable $posts a la vista.
   
-Aquí se usa el modelo Post para acceder a la base de datos.  
-El método ::all() es un método de Eloquent (ORM de Laravel) que hace una consulta SELECT * FROM posts, es decir, trae todos los registros de la tabla posts.  
-El resultado es una colección de objetos de tipo Post.  
+   Aquí se usa el modelo Post para acceder a la base de datos.  
+   El método ::all() es un método de Eloquent (ORM de Laravel) que hace una consulta SELECT * FROM posts, es decir, trae todos los registros de la tabla posts.  
+   El resultado es una colección de objetos de tipo Post.  
   
-return view('category.index', compact('posts'));  
-Esta línea retorna una vista Blade llamada category/index.blade.php (la carpeta y el archivo).  
-compact('posts') es una forma corta de decir:  
-return view('category.index', ['posts' => $posts]);  
-Es decir, le estoy pasando la variable $posts a la vista, para que desde ahí pueda usarla y mostrar los datos.  
+   return view('category.index', compact('posts'));  
+   Esta línea retorna una vista Blade llamada category/index.blade.php (la carpeta y el archivo).  
+   compact('posts') es una forma corta de decir:  
+   return view('category.index', ['posts' => $posts]);  
+   Es decir, le estoy pasando la variable $posts a la vista, para que desde ahí pueda usarla y mostrar los datos.  
   
 6. Sigo con la explicación de los cambios.  
 ![Ejemplo](./images/imagenesReadme/4-3_07.png)  
-$id ---> Recibe el identificador del post.
-Post::findOrFail($id) ---> 	Busca el post por ID. Devuelve error 404 si no lo encuentra.  
-view('category.show', ...) ---> Muestra la vista category/show.blade.php con los datos del post.  
-compact('post') ---> Pasa la variable $post a la vista.  
+   $id ---> Recibe el identificador del post.
+   Post::findOrFail($id) ---> 	Busca el post por ID. Devuelve error 404 si no lo encuentra.  
+   view('category.show', ...) ---> Muestra la vista category/show.blade.php con los datos del post.  
+   compact('post') ---> Pasa la variable $post a la vista.  
   
-public function getShow($id)
-Este es un método público llamado getShow, que espera un parámetro $id.
-$id representa el ID del post que quiero mostrar.
-Este método probablemente se asocia a la ruta category/show/{id}  
+   public function getShow($id)
+   Este es un método público llamado getShow, que espera un parámetro $id.
+   $id representa el ID del post que quiero mostrar.
+   Este método probablemente se asocia a la ruta category/show/{id}  
   
-$post = Post::findOrFail($id);  
-Esta línea busca un registro en la base de datos con el ID que se recibió como parámetro.
-El método findOrFail($id) hace lo siguiente:  
-Intenta hacer SELECT * FROM posts WHERE id = $id LIMIT 1.  
-Si encuentra el post, lo devuelve como un objeto Post.  
-Si NO lo encuentra, Laravel lanza automáticamente un error 404 Not Found.  
-Esto es útil para no tener que comprobar manualmente si existe.  
-Por ejemplo: Si el ID que llega es 5, Laravel va a buscar el post con id = 5. Si existe, lo guarda en $post. Si no existe, devuelve error 404.  
+   $post = Post::findOrFail($id);  
+   Esta línea busca un registro en la base de datos con el ID que se recibió como parámetro.
+   El método findOrFail($id) hace lo siguiente:  
+   Intenta hacer SELECT * FROM posts WHERE id = $id LIMIT 1.  
+   Si encuentra el post, lo devuelve como un objeto Post.  
+   Si NO lo encuentra, Laravel lanza automáticamente un error 404 Not Found.  
+   Esto es útil para no tener que comprobar manualmente si existe.  
+   Por ejemplo: Si el ID que llega es 5, Laravel va a buscar el post con id = 5. Si existe, lo guarda en $post. Si no existe, devuelve error 404.  
 
-return view('category.show', compact('post'));  
-Esta línea carga la vista resources/views/category/show.blade.php.  
-Con compact('post') le paso el post encontrado a la vista.  
-Dentro de esa vista puedo acceder a $post->title, $post->content, etc., y mostrarlo.  
+   return view('category.show', compact('post'));  
+   Esta línea carga la vista resources/views/category/show.blade.php.  
+   Con compact('post') le paso el post encontrado a la vista.  
+   Dentro de esa vista puedo acceder a $post->title, $post->content, etc., y mostrarlo.  
 
 7. ¿Qué pasa en la vista?  
 ![Ejemplo](./images/imagenesReadme/4-3_08.png)  
-En la vista index.blade.php, tengo:  
-Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
+   En la vista index.blade.php, tengo:  
+   Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
