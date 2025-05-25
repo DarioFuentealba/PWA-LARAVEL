@@ -11,18 +11,18 @@
 <p align="center">
   <img src="./images/imagenesReadme/logo-UNCo.png" width="150" />
   <img src="./images/imagenesReadme/logo-FAI.png" width="150" />
-</p>  
+</p><br><br><br>
     
     
 ## Integrantes: 
   * Fuentes Camila FAI-4241  
   * Fuentealba Dario FAI-4424  
-  * Riveiro Matías FAI-4438  
+  * Riveiro Matías FAI-4438<br><br><br>
     
     
     
 # <p align="center">Trabajo Práctico N° 3: Laravel</p>  
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p><br><br><br>
 
   
 ## Ejercico 1- Instalación de Laravel. Definición de las rutas  
@@ -36,14 +36,14 @@
 ![Ejemplo](./images/imagenesReadme/1_02.png)  
   
 3. Lo pruebo también en el navegador:  
-![Ejemplo](./images/imagenesReadme/1_03.png)  
+![Ejemplo](./images/imagenesReadme/1_03.png)<br><br><br>
     
     
 ## Ejercico 2 - Layout principal de las vistas  
   
 1. Crear las vistas asociadas a cada ruta.  
 ![Ejemplo](./images/imagenesReadme/2_01.png)  
-![Ejemplo](./images/imagenesReadme/2_02.png)<br><br>
+![Ejemplo](./images/imagenesReadme/2_02.png)<br><br><br>
     
 ## Ejercico 3 - Controladores  
   
@@ -59,7 +59,7 @@
   
 4. El HomeController es diferente del CategoryController debido a que tiene 1 sola función llamada __invoke y esto hace que no sea necesario agregar el nombre de la función.  
 ![Ejemplo](./images/imagenesReadme/3_05.png)  
-![Ejemplo](./images/imagenesReadme/3_06.png)  
+![Ejemplo](./images/imagenesReadme/3_06.png)<br><br><br>
   
     
 ## Ejercico 4.1 - Configuración de la base de datos y migraciones  
@@ -86,7 +86,7 @@
 ![Ejemplo](./images/imagenesReadme/4-1_07.png)  
   
 8. Si tira error, debo verificar que el cotejamiento que seleccioné al crear la BD sea el mismo que tengo en el script database.php  
-![Ejemplo](./images/imagenesReadme/4-1_08.png)  
+![Ejemplo](./images/imagenesReadme/4-1_08.png)<br><br><br>
     
 ## Ejercico 4.2  
   
@@ -110,7 +110,7 @@
 ![Ejemplo](./images/imagenesReadme/4-2_06.png)  
   
 6. Yo lo dejo vacío.  
-![Ejemplo](./images/imagenesReadme/4-2_07.png)  
+![Ejemplo](./images/imagenesReadme/4-2_07.png)<br><br><br>
   
     
 ## Ejercico 4.3 - Uso de la base de datos  
@@ -174,7 +174,7 @@
 7. ¿Qué pasa en la vista?  
 ![Ejemplo](./images/imagenesReadme/4-3_08.png)  
    En la vista index.blade.php, tengo:  
-   Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
+   Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.<br><br><br>
      
      
    ## Ejercicio 5.1- Migración de la tabla usuarios  
@@ -207,7 +207,7 @@
    ![Ejemplo](./images/imagenesReadme/5-1_07.png)  
      
    7. Ejecuto el seeder y verifico en phpmyadmin que se cargaron los datos en la tabla users.  
-   ![Ejemplo](./images/imagenesReadme/5-1_08.png)  
+   ![Ejemplo](./images/imagenesReadme/5-1_08.png)<br><br><br>
      
      
    ### Ahora veamos Tinker y Seeder.  
@@ -234,7 +234,7 @@
       Velocidad	            Muy rápido para una prueba	  Más lento pero repetible y reutilizable  
       Persistencia	          No se guarda el código	      Se guarda como archivo en database/seeders  
       Ideal para	            Pruebas rápidas	              Llenar base de datos inicial o en producción  
-      Parte de despliegue	  No	                          Sí (se puede correr en servidores)  
+      Parte de despliegue	  No	                          Sí (se puede correr en servidores)<br><br><br>
      
        
    ## Ejercicio 5.2- Sistema de autenticación  
