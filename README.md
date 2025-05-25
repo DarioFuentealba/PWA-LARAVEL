@@ -27,6 +27,18 @@
   
 ## Ejercico 1- Instalación de Laravel. Definición de las rutas  
   
+### Instalación de Compposer  
+  
+
+### Instalación de Laravel 12  
+  
+1. Dentro de la carpeta donde voy a crear mi repositorio ingreso el comando laravel new nombre-del-proyecto (en mi caso será laravel new myblog) y sigo los pasos.  
+![Ejemplo](./images/imagenesReadme/01_01.png)  
+![Ejemplo](./images/imagenesReadme/01_02.png)  
+![Ejemplo](./images/imagenesReadme/01_03.png)  
+![Ejemplo](./images/imagenesReadme/01_04.png)  
+![Ejemplo](./images/imagenesReadme/01_05.png)<br><br><br>
+
 ### Rutas del sitio web  
   
 1.  Definir las rutas principales que va a tener nuestro sitio web.  
