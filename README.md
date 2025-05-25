@@ -44,7 +44,7 @@
 1. Crear las vistas asociadas a cada ruta.  
 ![Ejemplo](./images/imagenesReadme/2_01.png)  
 ![Ejemplo](./images/imagenesReadme/2_02.png)  
-    
+    <br><br>
     
 ## Ejercico 3 - Controladores  
   
