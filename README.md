@@ -6,7 +6,7 @@
 # <p align="center">Programacion Web Avanzada</p>
   
   
-# <p align="center">PWA-LARAVEL</p>  
+# <p align="center">PWA-REACT</p>  
     
 <p align="center">
   <img src="./images/imagenesReadme/logo-UNCo.png" width="150" />
@@ -94,7 +94,7 @@
 1. Comando de Artisan para crear el modelo llamado Post.  
 ![Ejemplo](./images/imagenesReadme/4-2_01.png)  
   
-2. Crea el script Post.php en myblog/app/Models/Post.php  
+2. Crea el script Post.php en myblog/app/Models/Post.php
 ![Ejemplo](./images/imagenesReadme/4-2_02.png)  
   
 3. ¿Qué hace este modelo?  
@@ -176,110 +176,77 @@
 ![Ejemplo](./images/imagenesReadme/4-3_08.png)  
    En la vista index.blade.php, tengo:  
    Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.  
-  
-  
-## Ejercicio 5.1- Migración de la tabla usuarios  
-  
-1. Ejecutar el comando de Artisan que añade las nuevas migraciones.  
-   Yo omito este paso porque ya hice las migraciones anteriormente.  
-![Ejemplo](./images/imagenesReadme/4-1_06.png)  
-  
-2. compruebo con PHPMyAdmin que la tabla se ha creado correctamente con todos campos indicados.  
-![Ejemplo](./images/imagenesReadme/5-1_02.png)  
-  
-3. Rellenar la tabla users con los datos iniciales de prueba.  
-   Acá tengo 2 opciones, TINKER o SEEDER, voy a usar seeder.  
-   Luego de este paso coloco una explicación de cada uno.  
-  
-4. Decidí utilisar seeder, por lo tanto, corro el siguiente comando que me creará el script UsersTableSeeder.php en myblog\database\seeders\UsersTableSeeder.php.  
-![Ejemplo](./images/imagenesReadme/5-1_03.png)  
-  
-5. Edito el scrip para agregar usuarios, en mi caso, colocare 5.  
-  
-   El script original es el siguiente:  
-![Ejemplo](./images/imagenesReadme/5-1_04.png)  
-  
-   Lo modifico y queda así:  
-![Ejemplo](./images/imagenesReadme/5-1_05.png)  
-   Además de los usuarios, agregé las siguientes líneas:  
-![Ejemplo](./images/imagenesReadme/5-1_06.png)  
-  
-6. Ahora agrego el seeder al archivo principal.  
-![Ejemplo](./images/imagenesReadme/5-1_07.png)  
-  
-7. Ejecuto el seeder y verifico en phpmyadmin que se cargaron los datos en la tabla users.  
-![Ejemplo](./images/imagenesReadme/5-1_08.png)  
-  
-  
-### Ahora veamos Tinker y Seeder.  
-  
-   ### Tinker:
-   Es una consola interactiva de Laravel basada en el REPL de PHP (PsySH). Permite ejecutar código PHP directamente dentro del entorno de Laravel.  
-  
-   Ventajas:
-   Ideal para probar código rápidamente.  
-   No requiere escribir archivos ni guardar nada.  
-   Muy útil en fase de desarrollo o depuración.  
-  
-   ### Seeder:  
-   s una clase PHP que define datos de prueba o iniciales para insertar automáticamente en la base de datos. Laravel ejecuta los seeders con el comando php artisan db:seed.
-  
-   Ventajas:  
-   Ideal para llenar la base de datos con datos repetibles y automatizados.  
-   Se puede versionar y compartir con el equipo.  
-   Muy útil cuando querés poblar varias tablas a la vez o preparar datos al desplegar la app.  
-  
-   ### Comparación directa  
-   Característica	        Tinker	                      Seeder  
-   Uso	                  Manual, interactivo	          Automático, programado  
-   Velocidad	            Muy rápido para una prueba	  Más lento pero repetible y reutilizable  
-   Persistencia	          No se guarda el código	      Se guarda como archivo en database/seeders  
-   Ideal para	            Pruebas rápidas	              Llenar base de datos inicial o en producción  
-   Parte de despliegue	  No	                          Sí (se puede correr en servidores)  
-  
-    
-## Ejercicio 5.2- Sistema de autenticación  
-  
-1. Completar el sistema de autenticación siguiendo el enlace: https://laravel.com/docs/12.x/starter-kits  
-![Ejemplo](./images/imagenesReadme/5-2_01.png)  
-  
-2. Debo instalar PHP y la herramienta Laravel CLI. Si ya tengo PHP y Composer instalados, puedo instalar la herramienta CLI del instalador de Laravel a través de Composer:  
-![Ejemplo](./images/imagenesReadme/5-2_02.png)  
-  
-3. Crear una nueva aplicación Laravel (yo ya la tengo creada, es myblog)  
-![Ejemplo](./images/imagenesReadme/5-2_03.png)  
-  
-4. Entro a la carpeta de mi app.  
-![Ejemplo](./images/imagenesReadme/5-2_04.png)  
-  
-5. Después de crear la aplicación Laravel, sólo tengo que instalar sus dependencias frontend a través de NPM e iniciar el servidor de desarrollo de Laravel.  
-  
-6. Uso npm install para instalar las dependencias de JavaScript listadas en mi archivo package.json (por ejemplo: Vite, Tailwind, Bootstrap, Vue, etc.), también crea o actualiza la carpeta node_modules/.  
-![Ejemplo](./images/imagenesReadme/5-2_05.png)  
-  
-7. Uso npm run build para compilar los assets (CSS, JS, imágenes) para producción usando Vite o Laravel Mix, dependiendo de mi configuración. Además crea archivos minificados en public/build/ o similar.  
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
-  
-8. Una vez que haya iniciado el servidor de desarrollo de Laravel, la aplicación será accesible en el navegador web en http://localhost:8000.  
-![Ejemplo](./images/imagenesReadme/5-2_07.png)  
-  
-9. Hay 3 kits de inicio, React, Vue y Livewire, voy a utilizar el de React.  
-   El kit de inicio de React utiliza React 19, TypeScript, Tailwind, Inertia y el shadcn/ui biblioteca de componentes. Debo instalar shadcn/ui yo mismo, es una biblioteca moderna de componentes UI (inputs, botones, tabs, modales, etc.) hecha con Tailwind CSS, accesible, con buen diseño y extremadamente personalizable (los componentes se copian a tu proyecto)  
-  
-10. La instalación de shadcn/ui se hará con un nuevo proyecto y se podrá ver la documentación en https://ui.shadcn.com/docs/installation/laravel.  
-![Ejemplo](./images/imagenesReadme/5-2_08.png)  
-  
-11. sdsfgfhg
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
-  
-12. sdfsgfh
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
-  
-13. sdafshg
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
-  
-14. sdafsgh
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
-  
-15. dsafsghjj
-![Ejemplo](./images/imagenesReadme/5-2_06.png)  
+     
+     
+   ## Ejercicio 5.1- Migración de la tabla usuarios  
+     
+   1. Ejecuto el comando de Artisan que añade las nuevas migraciones.  
+      Yo omito este paso porque ya hice las migraciones anteriormente.  
+   ![Ejemplo](./images/imagenesReadme/4-1_06.png)  
+     
+   2. Compruebo con PHPMyAdmin que la tabla se ha creado correctamente con todos campos indicados.  
+   ![Ejemplo](./images/imagenesReadme/5-1_02.png)  
+     
+   3. Relleno la tabla users con los datos iniciales de prueba.  
+      Acá tengo 2 opciones, TINKER o SEEDER, voy a usar seeder.  
+      Luego de este ejercicio coloco una explicación de cada uno.  
+     
+   4. Decidí utilizar seeder, por lo tanto, corro el siguiente comando que me creará el script UsersTableSeeder.php en myblog\database\seeders\UsersTableSeeder.php.  
+   ![Ejemplo](./images/imagenesReadme/5-1_03.png)  
+     
+   5. Edito el scrip para agregar usuarios, en mi caso, colocare 5.  
+     
+      El script original es el siguiente:  
+   ![Ejemplo](./images/imagenesReadme/5-1_04.png)  
+     
+      Lo modifico y queda así:  
+   ![Ejemplo](./images/imagenesReadme/5-1_05.png)  
+      Además de los usuarios, agregé las siguientes líneas:  
+   ![Ejemplo](./images/imagenesReadme/5-1_06.png)  
+     
+   6. Ahora agrego el seeder al archivo principal.  
+   ![Ejemplo](./images/imagenesReadme/5-1_07.png)  
+     
+   7. Ejecuto el seeder y verifico en phpmyadmin que se cargaron los datos en la tabla users.  
+   ![Ejemplo](./images/imagenesReadme/5-1_08.png)  
+     
+     
+   ### Ahora veamos Tinker y Seeder.  
+     
+      ### Tinker:
+      Es una consola interactiva de Laravel basada en el REPL de PHP (PsySH). Permite ejecutar código PHP directamente dentro del entorno de Laravel.  
+     
+      Ventajas:
+      Ideal para probar código rápidamente.  
+      No requiere escribir archivos ni guardar nada.  
+      Muy útil en fase de desarrollo o depuración.  
+     
+      ### Seeder:  
+      s una clase PHP que define datos de prueba o iniciales para insertar automáticamente en la base de datos. Laravel ejecuta los seeders con el comando php artisan db:seed.
+     
+      Ventajas:  
+      Ideal para llenar la base de datos con datos repetibles y automatizados.  
+      Se puede versionar y compartir con el equipo.  
+      Muy útil cuando querés poblar varias tablas a la vez o preparar datos al desplegar la app.  
+     
+      ### Comparación directa  
+      Característica	        Tinker	                      Seeder  
+      Uso	                  Manual, interactivo	          Automático, programado  
+      Velocidad	            Muy rápido para una prueba	  Más lento pero repetible y reutilizable  
+      Persistencia	          No se guarda el código	      Se guarda como archivo en database/seeders  
+      Ideal para	            Pruebas rápidas	              Llenar base de datos inicial o en producción  
+      Parte de despliegue	  No	                          Sí (se puede correr en servidores)  
+     
+       
+   ## Ejercicio 5.2- Sistema de autenticación  
+     
+   1. Instalo Laravel breeze con el siguinte comando: composer require laravel/breeze --dev  
+   ![Ejemplo](./images/imagenesReadme/5-2--01.png)  
+     
+   2. Ejecuto el instalador de Breeze (usa Blade por defecto): php artisan breeze:install  
+   ![Ejemplo](./images/imagenesReadme/5-2--02.png)  
+     
+   3. Instalo dependencias front-end y compilo assets (necesitás tener npm instalado):    
+   ![Ejemplo](./images/imagenesReadme/5-2--03.png)  
+   ![Ejemplo](./images/imagenesReadme/5-2--04.png)  
+     
