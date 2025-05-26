@@ -6,6 +6,7 @@
 /storage/*.key
 /storage/pail
 /vendor
+.env
 .env.backup
 .env.production
 .phpactor.json
@@ -27,6 +28,7 @@ yarn-error.log
 /node_modules
 /public/storage
 /storage/*.key
+.env
 .env.*.php
 Homestead.json
 Homestead.yaml
