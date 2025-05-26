@@ -25,7 +25,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p><br><br><br>
 
   
-## Ejercico 1- Instalación de Laravel. Definición de las rutas  
+## Ejercico 1 - Instalación de Laravel. Definición de las rutas  
   
 ### Instalación de Compposer  
   
@@ -100,7 +100,7 @@
 8. Si tira error, debo verificar que el cotejamiento que seleccioné al crear la BD sea el mismo que tengo en el script database.php  
 ![Ejemplo](./images/imagenesReadme/4-1_08.png)<br><br><br>
     
-## Ejercico 4.2  
+## Ejercico 4.2 - Modelo de datos  
   
 1. Comando de Artisan para crear el modelo llamado Post.  
 ![Ejemplo](./images/imagenesReadme/4-2_01.png)  
@@ -189,7 +189,7 @@
    Gracias al compact('posts'), esta variable $posts está disponible ahí y puedo recorrerla para mostrar el contenido en HTML.<br><br><br>
      
      
-   ## Ejercicio 5.1- Migración de la tabla usuarios  
+   ## Ejercicio 5.1 - Migración de la tabla usuarios  
      
    1. Ejecuto el comando de Artisan que añade las nuevas migraciones.  
       Yo omito este paso porque ya hice las migraciones anteriormente.  
@@ -249,7 +249,7 @@
       Parte de despliegue	  No	                          Sí (se puede correr en servidores)<br><br><br>
      
        
-   ## Ejercicio 5.2- Sistema de autenticación  
+   ## Ejercicio 5.2 - Sistema de autenticación  
      
    1. Instalo Laravel breeze con el siguinte comando: composer require laravel/breeze --dev  
    ![Ejemplo](./images/imagenesReadme/5-2--01.png)  
