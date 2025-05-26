@@ -6,8 +6,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Rutas propias
-Route::get('/', [HomeController::class, 'getHome']);
+//Rutas propias
+Route::get('/', HomeController::class); //Usa el método __invoke automáticamente
 Route::get('/login-custom', [AuthController::class, 'getLogin']); //Cuidado: Breeze ya usa /login
 Route::get('/logout-custom', [AuthController::class, 'getLogout']); //Cuidado: Breeze también maneja logout
 
@@ -15,6 +15,11 @@ Route::get('/category', [CategoryController::class, 'getIndex']);
 Route::get('/category/create', [CategoryController::class, 'getCreate']);
 Route::get('/category/show/{id}', [CategoryController::class, 'getShow']);
 Route::get('/category/edit/{id}', [CategoryController::class, 'getEdit']);
+
+Route::post('/category/store', [CategoryController::class, 'store']);
+Route::put('/category/update/{id}', [CategoryController::class, 'update']);
+Route::delete('/category/destroy/{id}', [CategoryController::class, 'destroy']);
+
 
 //Rutas agregadas por Breeze
 Route::get('/', function () {
