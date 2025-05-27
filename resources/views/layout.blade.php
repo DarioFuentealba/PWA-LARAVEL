@@ -14,7 +14,6 @@
             @guest
                 <a href="/register" class="hover:underline">Registrarse</a>
                 <a href="/login" class="hover:underline">Login</a>
-                <a href="/category" class="hover:underline">Categorías</a>
             @else
                 <!-- Perfil -->
                 <!-- Dropdown Perfil -->
@@ -61,6 +60,9 @@
                 <!-- Categorias del usuario -->
                 <a href="{{ route('user.categories') }}" class="hover:underline">Mis Categorías</a>
             @endguest
+
+            <!-- Botón para ver las categorías de todos -->
+            <a href="/category" class="hover:underline">Categorías</a>
 
 
         </div>
