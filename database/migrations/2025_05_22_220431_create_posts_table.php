@@ -11,14 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
+
         Schema::create('posts', function (Blueprint $table) {
             $table->id(); //id autoincremental.
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('categories_id')->constrained()->onDelete('cascade');
             $table->string('title'); //Titulo
             $table->string('poster'); //Imagen o autor.
             $table->boolean('habilitated')->default(false); //Habilitado, por defecto es falso.
             $table->text('content'); //Contenido largo.
             $table->timestamps(); //created_at y updated_at
         });
+
     }
 
     /**
@@ -27,5 +36,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('posts');
+        Schema::dropIfExists('categories');
     }
 };
