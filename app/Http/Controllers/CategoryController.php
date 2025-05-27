@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
     //Mostrar listado de posts
-    public function getIndex()
-{
+    public function getIndex(){
         $posts = Post::all();
         return view('category.index', compact('posts'));
     }
 
+    public function getUserCategories(){
+        $user = Auth::user(); // o simplemente Auth::id()
+        $posts = Post::where('user_id', $user->id)->get();
+
+        return view('category.userCategories', compact('posts'));
+    }
     //Mostrar un post individual
     public function getShow($id){
         $post = Post::findOrFail($id);

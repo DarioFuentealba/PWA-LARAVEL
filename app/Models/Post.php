@@ -15,4 +15,8 @@ class Post extends Model
         'content',
         'habilitated',
     ];
+
+        public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
