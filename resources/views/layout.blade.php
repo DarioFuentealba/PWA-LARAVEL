@@ -61,7 +61,7 @@
                 <a href="{{ route('user.categories') }}" class="hover:underline">Mis Categorías</a>
             @endguest
 
-            <!-- Botón para ver las categorías de todos -->
+            <!-- Boton para ver las categorias de todos -->
             <a href="/category" class="hover:underline">Categorías</a>
 
 
