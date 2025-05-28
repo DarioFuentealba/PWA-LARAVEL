@@ -12,7 +12,9 @@
             <!-- Columna centro -->
             <div class="flex flex-col items-center mt-6">
                 <div class='flex flex-col items-center w-20'> 
-                    <x-logo src="images/logo/logo5.png" alt="Logo de la página" />
+                    <a href="/">
+                        <x-logo src="images/logo/logo5.png" alt="Logo de la página" />
+                    </a>
                 </div>
                 <hr class="w-24 border-t border-[#67aaf1]/30 my-4" />
                 <div class="flex gap-4 mt-2 ">
