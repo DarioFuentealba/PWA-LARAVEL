@@ -41,7 +41,7 @@
                         menu.classList.toggle('hidden');
                     }
 
-                    //Cierra el menú si se hace clic fuera
+                    //Cierra el menu si se hace clic fuera
                     window.addEventListener('click', function(e) {
                         const button = document.querySelector('button[onclick="toggleDropdown()"]');
                         const menu = document.getElementById('dropdownMenu');
