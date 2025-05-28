@@ -71,6 +71,7 @@
         @yield('content')
     </div>
 
+    <x-boton-ir-arriba></x-boton-ir-arriba>
     <x-footer></x-footer>
 </body>
 </html>
