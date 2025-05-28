@@ -64,13 +64,14 @@
             <!-- Boton para ver las categorias de todos -->
             <a href="/category" class="hover:underline">Categorías</a>
 
-
         </div>
     </nav>
 
     <div class="p-6">
         @yield('content')
     </div>
+
+    <x-footer></x-footer>
 </body>
 </html>
 
