@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <x-titulo.titulo>Ver perfil</x-titulo.titulo>
+
     <h1 class="text-2xl font-bold mb-4">Mi Perfil</h1>
     <ul>
         <p><strong>Avatar:</strong> {{ $user->avatar}}</p>

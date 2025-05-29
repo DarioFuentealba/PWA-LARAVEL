@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <x-titulo.titulo>Mostrar post</x-titulo.titulo>
+
     <h1 class="text-3xl font-bold mb-2">{{ $post->title }}</h1>
     <p class="text-gray-700 mb-4">{{ $post->content }}</p>
 

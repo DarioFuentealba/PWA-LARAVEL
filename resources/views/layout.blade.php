@@ -8,7 +8,7 @@
 <body class="bg-gray-100 text-gray-800">
     <nav class="bg-blue-600 text-white p-4 flex justify-between">
         <a href="/">
-            <x-logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20"/>
+            <x-logo.logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20"/>
         </a>
         <div class="space-x-4">
             <a href="/" class="hover:underline">Inicio</a>
@@ -73,8 +73,8 @@
         @yield('content')
     </div>
 
-    <x-boton-ir-arriba></x-boton-ir-arriba>
-    <x-footer></x-footer>
+    <x-botones.boton-ir-arriba></x-botones.boton-ir-arriba>
+    <x-footer.footer></x-footer.footer>
 </body>
 </html>
 

@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <x-titulo.titulo>Editar post</x-titulo.titulo>
+
     <h1 class="text-2xl font-bold mb-4">Editar Post</h1>
 
     <form method="POST" action="{{ url('/category/update/' . $post->id) }}" class="space-y-4">

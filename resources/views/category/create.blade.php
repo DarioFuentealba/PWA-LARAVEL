@@ -1,6 +1,8 @@
 @extends('layout')
 
 @section('content')
+    <x-titulo.titulo>Crear post</x-titulo.titulo>
+
     <h1 class="text-2xl font-bold mb-4">Crear Nuevo Post</h1>
 
     <form method="POST" action="{{ url('/category/store') }}" class="space-y-4">
