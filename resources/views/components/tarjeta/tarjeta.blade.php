@@ -1,9 +1,9 @@
 
 
 <div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="../../../../public/images/categorias/{{ $imagen }}" alt="{{ $textoImagen }}">
+  <img class="w-full" src='images/tarjetas/{{ $image }}' alt="{{ $textoImagen ?? 'Imagen' }}">
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+    <div class="font-bold text-xl mb-2">{{ $title }}</div>
     <p class="text-gray-700 text-base">
         {{ $content }}    </p>
   </div>
