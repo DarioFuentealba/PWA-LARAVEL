@@ -5,7 +5,7 @@
     <title>Mi Sitio Web</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-[f4f1ee] text-[#5C5C5C]">
+<body class="bg-cover bg-center h-screen text-[#5C5C5C]" style="background-image: url('images/fondos/fondoMarmol.jpg')">
 
     <x-header.header></x-header.header>
 
