@@ -18,15 +18,18 @@
                 </x-dropdownMenu.dropdownMenu>
 
                 <!-- Boton para cerrar sesion -->
-<x-botones.boton-header 
-    texto="Logout" 
-    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-</x-botones.boton-header>
+                <x-botones.boton-header 
+                    texto="Logout" 
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                </x-botones.boton-header>
 
-<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-    @csrf
-</form>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                    @csrf
+                </form>
 
+                <!-- Favoritos -->
+                <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
+                
                 <!-- Categorias del usuario -->
                 <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'"></x-botones.boton-header>
             @endguest
