@@ -12,7 +12,7 @@ Route::get('/', HomeController::class); //Usa el método __invoke automáticamen
 
 Route::get('/register', [RegisterController::class]);
 Route::get('/login-custom', [AuthController::class, 'getLogin']); //Cuidado: Breeze ya usa /login
-Route::get('/logout-custom', [AuthController::class, 'getLogout']); //Cuidado: Breeze también maneja logout
+Route::post('/logout-custom', [AuthController::class, 'getLogout']); //Cuidado: Breeze también maneja logout
 
 Route::get('/category', [CategoryController::class, 'getIndex']);
 Route::get('/category/create', [CategoryController::class, 'getCreate']);

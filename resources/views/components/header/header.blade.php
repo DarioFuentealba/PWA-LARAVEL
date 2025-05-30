@@ -18,10 +18,14 @@
                 </x-dropdownMenu.dropdownMenu>
 
                 <!-- Boton para cerrar sesion -->
-                <form method="POST" action="{{ route('logout') }}" class="inline">
-                    @csrf
-                    <button type="submit" class="hover:underline">Logout</button>
-                </form>
+<x-botones.boton-header 
+    texto="Logout" 
+    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+</x-botones.boton-header>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+    @csrf
+</form>
 
                 <!-- Categorias del usuario -->
                 <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'"></x-botones.boton-header>
