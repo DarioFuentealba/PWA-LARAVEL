@@ -12,7 +12,10 @@
             @else
                 <!-- Perfil -->
                 <!-- Dropdown Perfil -->
-                <x-dropdownMenu.dropdownMenu></x-dropdownMenu.dropdownMenu>
+                <x-dropdownMenu.dropdownMenu texto="Perfil">
+                    <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-[#c2b280] hover:bg-[#1a2638] hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]" role="menuitem">Ver Perfil</a>
+                    <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-[#c2b280] hover:bg-[#1a2638] hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]" role="menuitem">Editar/Eliminar Perfil</a>
+                </x-dropdownMenu.dropdownMenu>
 
                 <!-- Boton para cerrar sesion -->
                 <form method="POST" action="{{ route('logout') }}" class="inline">
