@@ -10,7 +10,7 @@
             </div>
 
             <!-- Columna centro -->
-            <div class="flex flex-col items-center mt-6">
+            <div class="flex flex-col items-center mt-3">
                 <div class='flex flex-col items-center w-20'> 
                     <a href="/">
                         <x-logo src="images/logo/logo5.png" alt="Logo de la página" />
