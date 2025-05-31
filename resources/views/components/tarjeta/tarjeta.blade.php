@@ -2,10 +2,10 @@
 
   <!-- Imagen superpuesta absoluta arriba -->
   <img src="/images/varias/borde.png" alt="Borde decorativo"
-        class="absolute top-0 left-0 w-full h-[130%] object-contain z-50 pointer-events-none">
+        class="absolute top-0 left-0 w-full h-[140%] object-contain z-50 pointer-events-none">
 
   <!-- Contenedor de la tarjeta (queda debajo) -->
-  <div class="relative z-10 flex items-end justify-center min-h-[500px] py-12 top-32">
+  <div class="relative z-10 flex items-end justify-center min-h-[500px] py-12 top-40">
     <div class="max-w-sm w-full bg-white rounded shadow-lg">
       <img class="w-full" src="images/tarjetas/{{ $image }}" alt="{{ $textoImagen ?? 'Imagen' }}">
       <div class="px-6 py-4">

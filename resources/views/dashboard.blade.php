@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <x-titulo.titulo>Bienvenido {{ Auth::user()->name }}</x-titulo.titulo>
+    <x-titulo.titulo>Bienvenido {{ Auth::user()->name }} 
+        <x-personajeDecorativo src="images/personajesDecorativos/afrodita.png" alt="afrodita" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">

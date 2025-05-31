@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <x-titulo.titulo>Mostrar post</x-titulo.titulo>
+    <x-titulo.titulo>Mostrar post 
+        <x-personajeDecorativo src="images/personajesDecorativos/guerrero.png" alt="guerrero" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <h1 class="text-3xl font-bold mb-2">{{ $post->title }}</h1>
     <p class="text-gray-700 mb-4">{{ $post->content }}</p>

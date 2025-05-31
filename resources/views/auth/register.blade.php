@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <x-titulo.titulo>Registrarse</x-titulo.titulo>
+    <x-titulo.titulo>Registrarse 
+        <x-personajeDecorativo src="images/personajesDecorativos/herrero.png" alt="Herrero" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <x-guest-layout>
         <form method="POST" action="{{ route('register') }}">

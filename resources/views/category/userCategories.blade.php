@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <x-titulo.titulo>Categorías de {{ Auth::user()->name }}</x-titulo.titulo>
+    <x-titulo.titulo>Categorías de {{ Auth::user()->name }} 
+        <x-personajeDecorativo src="images/personajesDecorativos/granjera.png" alt="granjera" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <h1 class="text-2xl font-bold mb-4">Mis Categorías</h1>
 

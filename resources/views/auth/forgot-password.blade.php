@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <x-titulo.titulo>Recuperar contraseña</x-titulo.titulo>
+    <x-titulo.titulo>Recuperar contraseña 
+        <x-personajeDecorativo src="images/personajesDecorativos/arpa.png" alt="arpa" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <x-guest-layout>
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">

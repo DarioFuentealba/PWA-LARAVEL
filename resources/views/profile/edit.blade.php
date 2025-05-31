@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <x-titulo.titulo>Editar / eliminar perfil</x-titulo.titulo>
+    <x-titulo.titulo>Editar / eliminar perfil 
+        <x-personajeDecorativo src="images/personajesDecorativos/rey-y-cerbero.png" alt="rey-y-cerbero" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
