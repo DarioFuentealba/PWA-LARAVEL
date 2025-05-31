@@ -5,11 +5,11 @@
     <title>Mi Sitio Web</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-cover bg-center h-screen text-[#5C5C5C]" style="background-image: url('images/fondos/fondoMarmol.jpg')">
+<body class="min-h-screen flex flex-col bg-cover bg-center  text-[#5C5C5C]" style="background-image: url('{{ asset('images/fondos/fondoMarmol.jpg') }}')">
 
     <x-header.header></x-header.header>
 
-    <div class="p-6">
+    <div class="p-6 flex-grow">
         @yield('content')
     </div>
 
