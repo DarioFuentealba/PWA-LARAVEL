@@ -8,8 +8,8 @@ use App\Models\Category;
 class HomeController extends Controller
 {
     public function __invoke(){
-        $category = New Category;
+        $categories = Category::all();
         
-        return view('home');
+        return view('home', compact('categories'));
     }
 }
