@@ -7,29 +7,29 @@ use App\Models\Post;
 use Illuminate\Http\Request;
 
 
-class CategoryController extends Controller
+class PostController extends Controller
 {
     //Mostrar listado de posts
     public function getIndex(){
         $posts = Post::all();
-        return view('category.index', compact('posts'));
+        return view('post.index', compact('posts'));
     }
 
     public function getUserCategories(){
         $user = Auth::user(); // o simplemente Auth::id()
         $posts = Post::where('user_id', $user->id)->get();
 
-        return view('category.userCategories', compact('posts'));
+        return view('post.userCategories', compact('posts'));
     }
     //Mostrar un post individual
     public function getShow($id){
         $post = Post::findOrFail($id);
-        return view('category.show', compact('post'));
+        return view('post.show', compact('post'));
     }
 
     //Mostrar formulario de creación
     public function getCreate(){
-        return view('category.create');
+        return view('post.create');
     }
 
     //Procesar creación del post
@@ -44,13 +44,13 @@ class CategoryController extends Controller
 
         Post::create($request->all());
 
-        return redirect('/category')->with('success', 'Post creado exitosamente.');
+        return redirect('/post')->with('success', 'Post creado exitosamente.');
     }
 
     //Mostrar formulario de edición
     public function getEdit($id){
         $post = Post::findOrFail($id);
-        return view('category.edit', compact('post'));
+        return view('post.edit', compact('post'));
     }
 
     //Procesar actualización del post
@@ -66,7 +66,7 @@ class CategoryController extends Controller
         $post = Post::findOrFail($id);
         $post->update($request->all());
 
-        return redirect('/category')->with('success', 'Post actualizado exitosamente.');
+        return redirect('/post')->with('success', 'Post actualizado exitosamente.');
     }
 
     //Eliminar un post
@@ -74,6 +74,6 @@ class CategoryController extends Controller
         $post = Post::findOrFail($id);
         $post->delete();
 
-        return redirect('/category')->with('success', 'Post eliminado exitosamente.');
+        return redirect('/post')->with('success', 'Post eliminado exitosamente.');
     }
 }

@@ -5,7 +5,7 @@
 
     <h1 class="text-2xl font-bold mb-4">Mis Categorías</h1>
 
-    <a href="{{ url('/post/create') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">
+    <a href="{{ url('/category/create') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">
         Crear nuevo post
     </a>
 

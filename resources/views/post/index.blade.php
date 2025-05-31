@@ -8,7 +8,7 @@
     <ul class="space-y-2 mt-4">
         @foreach($posts as $post)
             <li>
-                <a href="{{ url('/post/show/' . $post->id) }}" class="text-blue-600 hover:underline">
+                <a href="{{ url('/category/show/' . $post->id) }}" class="text-blue-600 hover:underline">
                     {{ $post->title }}
                 </a>
             </li>
