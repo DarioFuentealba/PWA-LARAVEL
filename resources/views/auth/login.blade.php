@@ -2,7 +2,9 @@
 
 @section('content')
     
-    <x-titulo.titulo>Iniciar sesión</x-titulo.titulo>
+    <x-titulo.titulo>Iniciar sesión 
+        <x-personajeDecorativo src="images/personajesDecorativos/hermes.png" alt="Hermes" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
     <x-guest-layout>
         <!-- Session Status -->

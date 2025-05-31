@@ -19,10 +19,10 @@
                 <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
                 
                 <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
-                @endguest
+                <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
+            @endguest
 
             <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
-             <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
             @php
                 $menuContent = ob_get_clean();
                 echo $menuContent;
