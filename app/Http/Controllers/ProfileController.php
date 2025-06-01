@@ -40,22 +40,26 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse{
         $user = $request->user();
+
+        // Validar manualmente los campos extra
+        $extraValidated = $request->validate([
+            'avatar' => ['nullable', 'in:avatar1.png,avatar2.png,avatar3.png,avatar4.png,avatar5.png,avatar6.png,avatar7.png,avatar8.png,avatar9.png,avatar10.png,avatar11.png'],
+            'borde_decorativo' => ['nullable', 'in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png'],
+        ]);
+
+        // Guardar los datos validados comunes
         $user->fill($request->validated());
 
-        //Si se cambia el email, reseteo verificación
+        // Si cambia el email, anula la verificación
         if ($user->isDirty('email')) {
             $user->email_verified_at = null;
         }
 
-        $user->borde_decorativo = $request->borde_decorativo;
+        // Asignar campos adicionales
+        $user->avatar = $extraValidated['avatar'] ?? $user->avatar;
+        $user->borde_decorativo = $extraValidated['borde_decorativo'] ?? $user->borde_decorativo;
 
         $user->save();
-
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
-        }
-
-        $request->user()->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
