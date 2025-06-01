@@ -4,25 +4,34 @@
         <a href="/" class="flex-shrink-0">
             <x-logo.logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20" />
         </a>
-        <div class="hidden md:flex md:flex-row md:space-x-4 ml-auto">
+        <div class="hidden md:flex md:flex-row md:space-x-4 w-full items-center">
             @php
                 ob_start();
             @endphp
-
+           
+           <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0"">
             <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
-
-            @guest
-                <x-botones.boton-header texto="Registrarse" onclick="window.location.href='{{ url('/register') }}'" />
-                <x-botones.boton-header texto="Login" onclick="window.location.href='{{ url('/login') }}'" />
+            <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />     
+           @guest
+                <x-botones.boton-sesion texto="Registrarse" onclick="window.location.href='{{ url('/register') }}'" />
+                <x-botones.boton-sesion texto="Login" onclick="window.location.href='{{ url('/login') }}'" />
             @else
                 <!-- Favoritos -->
                 <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
                 
                 <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
                 <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
-            @endguest
+                <x-botones.boton-sesion 
+                    texto="Logout" 
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                </x-botones.boton-header>
 
-            <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                    @csrf
+                </form>
+                @endguest
+           </div>
+            
             @php
                 $menuContent = ob_get_clean();
                 echo $menuContent;

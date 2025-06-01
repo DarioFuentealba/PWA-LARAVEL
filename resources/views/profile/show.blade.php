@@ -24,14 +24,6 @@
                     class="inline-block px-4 py-2 bg-[#c2b280] text-black text-opacity-60 rounded-lg hover:text-opacity-100 transition">
                         Modificar perfil
                     </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" 
-                                class="px-4 py-2 bg-[#c2b280] text-black text-opacity-60 rounded-lg hover:text-opacity-100 transition">
-                            Logout
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
