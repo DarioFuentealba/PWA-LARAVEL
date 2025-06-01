@@ -23,7 +23,7 @@
                     
                     <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
                     <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
-                    <x-botones.boton-sesion 
+                    <x-botones.boton-header 
                         texto="Logout" 
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     </x-botones.boton-header>

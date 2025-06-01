@@ -35,10 +35,16 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $request->validate([
+            'borde_decorativo' => 'nullable|in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png',
+            'avatar' => 'nullable', 'nullable|in:avatar1.png,avatar2.png,avatar3.png,avatar4.png,avatar5.png,avatar6.png,avatar7.png,avatar8.png,avatar9.png,avatar10.png,avatar11.png',
+        ]);
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'borde_decorativo' => $request->borde_decorativo,
         ]);
 
         event(new Registered($user));

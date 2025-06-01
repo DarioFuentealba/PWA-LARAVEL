@@ -8,14 +8,13 @@
 
     <div class="py-12 cursor-default">
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <div class="p-4 sm:p-8 bg-whiteshadow rounded-lg">
+            <div class="p-4 sm:p-8 bg-[#0d1b2a] rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-white">
                     <img src="{{ asset('storage/avatars/' . $user->avatar) }}" 
                         alt="Avatar" 
                         class="w-32 h-32 rounded-full object-cover border border-gray-300"/>
                     <div class="space-y-2 text-left">
                         <p><strong>Nombre:</strong> {{ $user->name }}</p>
-                        <p><strong>Apellido:</strong> {{ $user->apellido }}</p>
                         <p><strong>Email:</strong> {{ $user->email }}</p>
                     </div>
                 </div>
