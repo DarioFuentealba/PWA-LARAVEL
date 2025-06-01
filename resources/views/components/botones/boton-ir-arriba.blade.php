@@ -1,7 +1,7 @@
 <button
     onclick="scrollToTop()"
     id="scrollToTopBtn"
-    class="fixed bottom-6 right-6 z-50  bg-white border border-black text-black w-24 h-24 rounded-full shadow-lg flex flex-col items-center justify-between p-2 hover:drop-shadow-[0_0_8px_#6e1414]"
+    class="fixed bottom-6 right-6 z-50 hidden bg-white border border-black text-black w-24 h-24 rounded-full shadow-lg flex flex-col items-center justify-between p-2 hover:drop-shadow-[0_0_8px_#6e1414]"
     title="Ir arriba"
 >
     <!-- Imagen del boton -->

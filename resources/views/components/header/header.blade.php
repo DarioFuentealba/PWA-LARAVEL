@@ -8,30 +8,32 @@
             @php
                 ob_start();
             @endphp
-           
-           <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0"">
-            <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
-            <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />     
-           @guest
-                <x-botones.boton-sesion texto="Registrarse" onclick="window.location.href='{{ url('/register') }}'" />
-                <x-botones.boton-sesion texto="Login" onclick="window.location.href='{{ url('/login') }}'" />
-            @else
-                <!-- Favoritos -->
-                <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
-                
-                <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
-                <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
-                <x-botones.boton-sesion 
-                    texto="Logout" 
-                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                </x-botones.boton-header>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                    @csrf
-                </form>
+            <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0"">
+                <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
+                <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
+
+                @guest
+                    <x-botones.boton-header texto="Registrarse" onclick="window.location.href='{{ url('/register') }}'" />
+                    <x-botones.boton-header texto="Login" onclick="window.location.href='{{ url('/login') }}'" />
+
+                @else
+                    <!-- Favoritos -->
+                    <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
+                    
+                    <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
+                    <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
+                    <x-botones.boton-sesion 
+                        texto="Logout" 
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    </x-botones.boton-header>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                        @csrf
+                    </form>
                 @endguest
-           </div>
-            
+            </div>
+
             @php
                 $menuContent = ob_get_clean();
                 echo $menuContent;
@@ -40,8 +42,7 @@
 
         <label for="menu-toggle" class="text-white md:hidden cursor-pointer">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </label>
     </div>
