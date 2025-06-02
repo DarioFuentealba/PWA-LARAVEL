@@ -6,6 +6,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="min-h-screen flex flex-col bg-cover bg-center  text-[#5C5C5C]" style="background-image: url('{{ asset('images/fondos/fondoMarmol.jpg') }}')">
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <x-header.header></x-header.header>
 
