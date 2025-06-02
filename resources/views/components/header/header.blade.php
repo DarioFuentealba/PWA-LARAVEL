@@ -14,8 +14,8 @@
                 <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
 
                 @guest
-                    <x-botones.boton-header texto="Registrarse" onclick="window.location.href='{{ url('/register') }}'" />
-                    <x-botones.boton-header texto="Login" onclick="window.location.href='{{ url('/login') }}'" />
+                    <x-botones.boton-sesion  onclick="window.location.href='{{ url('/register') }}'" imagenUrl="https://images.icon-icons.com/3478/PNG/512/register_login_signup_icon_219991.png" />
+                    <x-botones.boton-sesion onclick="window.location.href='{{ url('/login') }}'" imagenUrl="https://images.icon-icons.com/2406/PNG/512/user_account_icon_145918.png" />
 
                 @else
                     <!-- Favoritos -->
@@ -23,10 +23,10 @@
                     
                     <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
                     <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
-                    <x-botones.boton-header 
-                        texto="Logout" 
+                    <x-botones.boton-sesion 
+                        imagenUrl="https://images.icon-icons.com/2518/PNG/512/logout_icon_151219.png"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    </x-botones.boton-header>
+                    </x-botones.boton-sesion>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                         @csrf
