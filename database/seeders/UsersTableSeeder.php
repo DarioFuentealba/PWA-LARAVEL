@@ -20,27 +20,27 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'Federico Paillelef',
                 'email' => 'federico@example.com',
-                'password' => Hash::make('111'),
+                'password' => Hash::make('ccc111111'),
             ],
             [
                 'name' => 'Juan Gómez',
                 'email' => 'juan@example.com',
-                'password' => Hash::make('222'),
+                'password' => Hash::make('ccc222222'),
             ],
             [
                 'name' => 'Laura Torres',
                 'email' => 'laura@example.com',
-                'password' => Hash::make('333'),
+                'password' => Hash::make('ccc333333'),
             ],
             [
                 'name' => 'Carlos Ruiz',
                 'email' => 'carlos@example.com',
-                'password' => Hash::make('444'),
+                'password' => Hash::make('ccc444444'),
             ],
             [
-                'name' => 'Ana López',
-                'email' => 'ana@example.com',
-                'password' => Hash::make('555'),
+                'name' => 'capo',
+                'email' => 'c@c.c',
+                'password' => Hash::make('ccc555555'),
             ],
         ];
 

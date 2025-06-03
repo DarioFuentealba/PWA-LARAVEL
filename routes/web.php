@@ -2,7 +2,7 @@
 
 use app\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegisterController;
+//use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\FavoritesController;
@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Route;
 //Rutas propias
 Route::get('/', HomeController::class); //Usa el método __invoke automáticamente
 
-Route::get('/register', [RegisterController::class]);
-Route::get('/login-custom', [AuthController::class, 'getLogin']); //Cuidado: Breeze ya usa /login
-Route::post('/logout-custom', [AuthController::class, 'getLogout']); //Cuidado: Breeze también maneja logout
+//Route::get('/register', [RegisterController::class]);
+//Route::get('/login-custom', [AuthController::class, 'getLogin']); //Cuidado: Breeze ya usa /login
+//Route::post('/logout-custom', [AuthController::class, 'getLogout']); //Cuidado: Breeze también maneja logout
 
 Route::get('/category', [CategoryController::class, 'getIndex']);
 Route::get('/category/create', [CategoryController::class, 'getCreate']);

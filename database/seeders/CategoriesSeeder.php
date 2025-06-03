@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Category;
 
-class Categories extends Seeder
+class CategoriesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -31,11 +31,6 @@ class Categories extends Seeder
             ],
             [
                 'name' => 'Heroes',
-                'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
-            ],
-            [
-                'name' => 'Dioses',
                 'image' => 'dioses.png',
                 'content' => 'Dioses los mejores',
             ],

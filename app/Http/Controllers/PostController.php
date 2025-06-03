@@ -37,6 +37,7 @@ class PostController extends Controller
     //Procesar creación del post
     public function store(Request $request){
         //Validación (opcional pero recomendado)
+        /*
         $request->validate([
             'user_id' => 'required',
             'title' => 'required|max:255',
@@ -45,7 +46,7 @@ class PostController extends Controller
             'habilitated' => 'required|boolean',
             'categories_id' => 'required',
         ]);
-
+*/
         Post::create($request->all());
 
         return redirect('/post')->with('success', 'Post creado exitosamente.');

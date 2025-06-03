@@ -21,8 +21,8 @@ return new class extends Migration
 
         Schema::create('posts', function (Blueprint $table) {
             $table->id(); //id autoincremental.
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('categories_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->default('1')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->default('1')->constrained()->onDelete('cascade');
             $table->string('title'); //Titulo
             $table->string('poster'); //Imagen o autor.
             $table->boolean('habilitated')->default(false); //Habilitado, por defecto es falso.
