@@ -2,7 +2,7 @@
     <input type="checkbox" id="menu-toggle" class="hidden peer" />
     <div class="flex justify-between items-center md:justify-start md:space-x-6">
         <a href="/" class="flex-shrink-0">
-            <x-logo.logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20" />
+            <x-logo.logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20" tooltip="Inicio" />
         </a>
         <div class="hidden md:flex md:flex-row md:space-x-4 w-full items-center">
             @php
@@ -18,7 +18,7 @@
 
                 @guest
                     <!-- Registrarse -->
-                    <x-botones.boton-sesion  onclick="window.location.href='{{ url('/register') }}'" imagenUrl="https://images.icon-icons.com/3478/PNG/512/register_login_signup_icon_219991.png"  tooltip="Registrarse" />
+                    <x-botones.boton-sesion  onclick="window.location.href='{{ url('/register') }}'" imagenUrl="https://images.icon-icons.com/3478/PNG/512/register_login_signup_icon_219991.png" tooltip="Registrarse" />
                     <!-- Login -->
                     <x-botones.boton-sesion onclick="window.location.href='{{ url('/login') }}'" imagenUrl="https://images.icon-icons.com/2406/PNG/512/user_account_icon_145918.png"  tooltip="Login" />
 
