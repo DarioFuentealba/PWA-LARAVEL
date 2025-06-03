@@ -5,7 +5,7 @@
 <div class="relative min-h-[500px]">
 
     {{-- Imagen del borde decorativo elegida por el usuario --}}
-    <img src="/images/varias/{{ Auth::user()->borde_decorativo ?? 'default.png' }}" 
+    <img src="/images/varias/{{ Auth::user()->borde ?? 'default.png' }}" 
         alt="Borde decorativo"
         class="absolute top-0 left-0 w-full h-[160%] object-contain z-50 pointer-events-none">
 

@@ -15,7 +15,7 @@ class ProfileController extends Controller
         return [
             'name' => ['string', 'max:255'],
             'email' => ['email', 'max:255'],
-            'borde_decorativo' => ['nullable', 'in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png'],
+            'borde' => ['nullable', 'in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png'],
             'avatar' => ['nullable', 'in:avatar1.png,avatar2.png,avatar3.png,avatar4.png,avatar5.png,avatar6.png,avatar7.png,avatar8.png,avatar9.png,avatar10.png,avatar11.png'],
         ];
     }
@@ -44,7 +44,7 @@ class ProfileController extends Controller
         // Validar manualmente los campos extra
         $extraValidated = $request->validate([
             'avatar' => ['nullable', 'in:avatar1.png,avatar2.png,avatar3.png,avatar4.png,avatar5.png,avatar6.png,avatar7.png,avatar8.png,avatar9.png,avatar10.png,avatar11.png'],
-            'borde_decorativo' => ['nullable', 'in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png'],
+            'borde' => ['nullable', 'in:borde1.png,borde2.png,borde3.png,borde4.png,borde5.png,borde6.png'],
         ]);
 
         // Guardar los datos validados comunes
@@ -57,7 +57,7 @@ class ProfileController extends Controller
 
         // Asignar campos adicionales
         $user->avatar = $extraValidated['avatar'] ?? $user->avatar;
-        $user->borde_decorativo = $extraValidated['borde_decorativo'] ?? $user->borde_decorativo;
+        $user->borde = $extraValidated['borde'] ?? $user->borde;
 
         $user->save();
 
