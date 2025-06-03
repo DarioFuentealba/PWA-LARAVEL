@@ -6,7 +6,7 @@
         <x-personajeDecorativo src="images/personajesDecorativos/poseidon.png" alt="poseidon" class="w-16 h-16 inline-block mr-2 align-middle" />
     </x-titulo.titulo>
 
-    <div class="py-12 cursor-default">
+    <div class="cursor-default">
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-[#0d1b2a] rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-white">
