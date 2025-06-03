@@ -9,13 +9,13 @@
                 ob_start();
             @endphp
 
-            <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0"">
+            <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0">
                 <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
                 <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
 
                 @guest
-                    <x-botones.boton-sesion  onclick="window.location.href='{{ url('/register') }}'" imagenUrl="https://images.icon-icons.com/3478/PNG/512/register_login_signup_icon_219991.png" />
-                    <x-botones.boton-sesion onclick="window.location.href='{{ url('/login') }}'" imagenUrl="https://images.icon-icons.com/2406/PNG/512/user_account_icon_145918.png" />
+                    <x-botones.boton-sesion  onclick="window.location.href='{{ url('/register') }}'" imagenUrl="https://images.icon-icons.com/3478/PNG/512/register_login_signup_icon_219991.png"  tooltip="Registrarse" />
+                    <x-botones.boton-sesion onclick="window.location.href='{{ url('/login') }}'" imagenUrl="https://images.icon-icons.com/2406/PNG/512/user_account_icon_145918.png"  tooltip="Login" />
 
                 @else
                     <!-- Favoritos -->
