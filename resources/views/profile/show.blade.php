@@ -10,7 +10,7 @@
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-[#0d1b2a] rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-white">
-                    <img src="{{ asset('storage/images/avatar/' . $user->avatar) }}" 
+                    <img src="{{ asset('images/avatar/' . $user->avatar) }}" 
                         alt="Avatar" 
                         class="w-32 h-32 rounded-full object-cover border border-gray-300"/>
                     {{--<img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 

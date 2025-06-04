@@ -7,7 +7,7 @@
     </x-titulo.titulo>
 
     <x-guest-layout>
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" class="mt-6 space-y-6">
             @csrf
 
             <!-- Name -->
@@ -48,33 +48,29 @@
             </div>
 
             <!-- Borde decorativo -->
-            <div class="mt-4">
-                <label class="block text-gray-700 font-bold mb-2">Elegí un borde decorativo:</label>
-
-                <div class="flex gap-4">
-                    @foreach(['borde1.png', 'borde2.png', 'borde3.png', 'borde4.png', 'borde5.png', 'borde6.png'] as $borde)
-                    <label class="cursor-pointer">
-                        <input type="radio" name="borde" value="{{ $borde }}" class="sr-only"
+            <div class="flex gap-4">
+                @foreach(['borde1.png', 'borde2.png', 'borde3.png', 'borde4.png', 'borde5.png', 'borde6.png'] as $borde)
+                    <label class="cursor-pointer relative group">
+                        <input type="radio" name="borde" value="{{ $borde }}"
+                            class="absolute opacity-0 peer"
                             {{ old('borde') == $borde ? 'checked' : '' }}>
-                        <img src="/images/bordeDecorativo/{{ $borde }}" class="w-24 border-2 rounded hover:border-[#0d1b2a]">
+                        <img src="{{ asset('images/bordeDecorativo/' . $borde) }}"
+                            class="w-24 border-4 rounded transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
                     </label>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
 
             <!-- Avatar -->
-            <div class="mt-4">
-                <label class="block text-gray-700 font-bold mb-2">Elegí un avatar:</label>
-
-                <div class="flex gap-4">
-                    @foreach(['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png'] as $avatar)
-                    <label class="cursor-pointer">
-                        <input type="radio" name="avatar" value="{{ $avatar }}" class="sr-only"
+            <div class="flex gap-4">
+                @foreach(['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png'] as $avatar)
+                    <label class="cursor-pointer relative group">
+                        <input type="radio" name="avatar" value="{{ $avatar }}"
+                            class="absolute opacity-0 peer"
                             {{ old('avatar') == $avatar ? 'checked' : '' }}>
-                        <img src="/images/avatar/{{ $avatar }}" class="border-2 rounded hover:border-[#0d1b2a]">
+                        <img src="{{ asset('images/avatar/' . $avatar) }}"
+                            class="w-24 border-4 rounded transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
                     </label>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
 
 

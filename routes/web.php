@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisteredUserController;
 
 //Rutas propias
 Route::get('/', HomeController::class); //Usa el método __invoke automáticamente
@@ -27,6 +28,8 @@ Route::get('/post/show/{id}', [PostController::class, 'getShow']);
 Route::get('/post/edit/{id}', [PostController::class, 'getEdit']);
 
 Route::get('/favorites', FavoritesController::class);
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
 
 //Solo usuarios logueados pueden acceder a esta ruta
 Route::middleware(['auth'])->group(function () {
