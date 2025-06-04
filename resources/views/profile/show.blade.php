@@ -13,9 +13,9 @@
                     <img src="{{ asset('storage/images/avatar/' . $user->avatar) }}" 
                         alt="Avatar" 
                         class="w-32 h-32 rounded-full object-cover border border-gray-300"/>
-                    <img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 
+                    {{--<img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 
                         alt="Borde decorativo" 
-                        class="w-45 h-64 object-cover border border-gray-300"/>
+                        class="w-45 h-64 object-cover border border-gray-300"/>--}}
                     <div class="space-y-2 text-left">
                         <p><strong>Nombre:</strong> {{ $user->name }}</p>
                         <p><strong>Email:</strong> {{ $user->email }}</p>

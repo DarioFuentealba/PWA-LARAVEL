@@ -27,18 +27,6 @@
             </div>
 
             <!-- Borde decorativo -->
-            <div class="mt-4">
-                <label class="block text-[#0d1b2a] font-bold mb-2">Elegí un borde decorativo:</label>
-                <div class="flex flex-wrap gap-4">
-                    @foreach(['borde1.png', 'borde2.png', 'borde3.png', 'borde4.png', 'borde5.png', 'borde6.png'] as $borde)
-                        <x-borde_decorativo
-                            src="{{ asset('images/bordeDecorativo/' . $borde) }}"
-                            :checked="auth()->user()->borde === $borde"
-                        />
-                    @endforeach
-                </div>
-            </div>
-
             <!-- Avatar -->
 
             <div class="p-4 sm:p-8 bg-[#6e1414] shadow sm:rounded-lg">
