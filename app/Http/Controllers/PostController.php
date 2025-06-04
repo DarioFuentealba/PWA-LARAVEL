@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Session;
 use Illuminate\Http\Request;
 
 
@@ -31,22 +32,23 @@ class PostController extends Controller
     //Mostrar formulario de creación
     public function getCreate(){
         $category = Category::all();
-        return view('post.create', compact('category'));
+        $session = Session::all();
+        return view('post.create', compact('category', 'session'));
     }
 
     //Procesar creación del post
     public function store(Request $request){
         //Validación (opcional pero recomendado)
-        /*
+        
         $request->validate([
             'user_id' => 'required',
-            'categories_id' => 'required',
+            'category_id' => 'required',
             'title' => 'required|max:255',
             'poster' => 'nullable|string',
             'content' => 'required',
             'habilitated' => 'required|boolean',
         ]);
-*/
+
         Post::create($request->all());
 
         return redirect('/post')->with('success', 'Post creado exitosamente.');
