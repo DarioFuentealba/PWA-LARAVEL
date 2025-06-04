@@ -40,11 +40,11 @@ class PostController extends Controller
         /*
         $request->validate([
             'user_id' => 'required',
+            'categories_id' => 'required',
             'title' => 'required|max:255',
             'poster' => 'nullable|string',
             'content' => 'required',
             'habilitated' => 'required|boolean',
-            'categories_id' => 'required',
         ]);
 */
         Post::create($request->all());

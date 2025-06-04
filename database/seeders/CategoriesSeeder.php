@@ -34,6 +34,11 @@ class CategoriesSeeder extends Seeder
                 'image' => 'dioses.png',
                 'content' => 'Dioses los mejores',
             ],
+            [
+                'name' => 'Mounstros',
+                'image' => 'dioses.png',
+                'content' => 'Dioses los mejores',
+            ],
         ];
 
         foreach ($categories as $category) {
