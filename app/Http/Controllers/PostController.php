@@ -12,34 +12,47 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     //Mostrar listado de posts
-    public function getIndex(){
+    public function getIndex($id)
+    {
         $posts = Post::all();
+
         return view('post.index', compact('posts'));
     }
 
-    public function getUserCategories(){
+    public function getCategoryPost($category_id)
+    {
+        $posts = Post::where('category_id', '=', $category_id);
+
+        return view('post.index', compact('posts'));
+    }
+
+    public function getUserCategories()
+    {
         $user = Auth::user(); // o simplemente Auth::id()
         $posts = Post::where('user_id', $user->id)->get();
 
         return view('post.userCategories', compact('posts'));
     }
     //Mostrar un post individual
-    public function getShow($id){
+    public function getShow($id)
+    {
         $post = Post::findOrFail($id);
         return view('post.show', compact('post'));
     }
 
     //Mostrar formulario de creación
-    public function getCreate(){
+    public function getCreate()
+    {
         $category = Category::all();
         $session = Session::all();
         return view('post.create', compact('category', 'session'));
     }
 
     //Procesar creación del post
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         //Validación (opcional pero recomendado)
-        
+
         $request->validate([
             'user_id' => 'required',
             'category_id' => 'required',
@@ -55,13 +68,15 @@ class PostController extends Controller
     }
 
     //Mostrar formulario de edición
-    public function getEdit($id){
+    public function getEdit($id)
+    {
         $post = Post::findOrFail($id);
         return view('post.edit', compact('post'));
     }
 
     //Procesar actualización del post
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         //Validación
         $request->validate([
             'user_id' => 'required',
@@ -79,7 +94,8 @@ class PostController extends Controller
     }
 
     //Eliminar un post
-    public function destroy($id){
+    public function destroy($id)
+    {
         $post = Post::findOrFail($id);
         $post->delete();
 

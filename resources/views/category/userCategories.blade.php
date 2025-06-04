@@ -12,10 +12,14 @@
     </a>
 
     @forelse($posts as $post)
-        <div class="bg-white p-4 shadow mb-2 rounded">
-            <h2 class="text-xl">{{ $post->title }}</h2>
-            <p>{{ $post->content }}</p>
-        </div>
+    <div>
+        <x-tarjeta.tarjeta>
+            <x-slot name="title">{{ $post->title }}</x-slot>
+            <x-slot name="image">{{ $post->poster }}</x-slot>
+            <x-slot name="content">{{ $post->content }}</x-slot>
+        </x-tarjeta.tarjeta>
+    </div>
+
     @empty
         <br><br><p>No tenés categorías.</p>
     @endforelse

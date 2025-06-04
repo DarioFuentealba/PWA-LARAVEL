@@ -10,7 +10,7 @@
     <div>
         <label class="block font-semibold">Autor</label>
         @foreach ($session as $user)
-            <input type="text" name="user_id" class="w-full border px-2 py-1" value="{{ $user['user_id'] }}">
+            <input type="text" name="user_id" class="w-full border px-2 py-1" value="{{ $user['user_id'] }}" >
             <input type="text" name="user_name" class="w-full border px-2 py-1" value="{{ $user['user_id'] }}">
         @endforeach
     </div>
@@ -37,7 +37,7 @@
         <label class="block font-semibold">Categoria</label>
         <select name="category_id" class="w-full border px-2 py-1">
             @foreach ($category as $cat)
-                <option value="{{ $cat['id'] }}">{{ $cat['name'] }}</option>
+                <option value="{{ $cat['id'] }}">{{ $cat->name }}</option>
             @endforeach
         </select>
     </div>
