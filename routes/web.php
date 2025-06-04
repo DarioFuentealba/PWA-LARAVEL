@@ -22,6 +22,7 @@ Route::get('/category/show/{id}', [CategoryController::class, 'getShow']);
 Route::get('/category/edit/{id}', [CategoryController::class, 'getEdit']);
 
 Route::get('/post/{category_id}', [PostController::class, 'getIndex']);
+Route::get('/post/categories/{category_id}', [PostController::class, 'getCategoryPost']);
 Route::get('/post/create', [PostController::class, 'getCreate']);
 Route::get('/post/show/{id}', [PostController::class, 'getShow']);
 Route::get('/post/edit/{id}', [PostController::class, 'getEdit']);
