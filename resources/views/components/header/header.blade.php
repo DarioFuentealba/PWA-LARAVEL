@@ -8,13 +8,8 @@
             @php
                 ob_start();
             @endphp
-<div class="flex items-center flex-col md:flex-row md:justify-evenly w-full md:ml-auto space-y-2 md:space-y-0">
 
-{{--<div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0">--}}
-                <!-- Inicio -->
-                <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
-                <!-- Categorias -->
-                <x-botones.boton-header texto="Categorías" onclick="window.location.href='{{ url('/category') }}'" />
+            <div class="flex items-center flex-col md:flex-row md:space-x-4 md:ml-auto space-y-2 md:space-y-0">
 
                 @guest
                     <!-- Registrarse -->
@@ -23,11 +18,15 @@
                     <x-botones.boton-sesion onclick="window.location.href='{{ url('/login') }}'" imagenUrl="https://images.icon-icons.com/2406/PNG/512/user_account_icon_145918.png"  tooltip="Login" />
 
                 @else
+                    <!-- Inicio -->
+                    <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
+                    <!-- Posts Generales -->
+                    <x-botones.boton-header texto="Posts Generales" onclick="window.location.href='{{ url('/category') }}'" />
                     <!-- Favoritos -->
                     <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
                     
-                    <!-- Mis categorias -->
-                    <x-botones.boton-header texto="Mis Categorías" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
+                    <!-- Mis posts -->
+                    <x-botones.boton-header texto="Mis Posts" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
                     <!-- Perfil -->
                     <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
                     <!-- Cerrar sesion -->
