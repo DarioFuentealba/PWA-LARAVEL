@@ -12,8 +12,9 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     //Mostrar listado de posts
-    public function getIndex(){
-        $posts = Post::all();
+    public function getIndex($id){
+        $posts = Post::where('category_id', '=', $id);
+
         return view('post.index', compact('posts'));
     }
 
