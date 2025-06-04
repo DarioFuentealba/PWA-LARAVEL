@@ -39,12 +39,7 @@ class PostsSeeder extends Seeder
                 'content' => 'Dioses los mejores',
             ],
             [
-                'user_id' => 'Heroes',
-                'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
-            ],
-            [
-                'user_id' => '3',
+                'user_id' => '2',
                 'category_id' => '1',
                 'title' => 'Post 4',
                 'poster' => 'dioses.png',
@@ -53,8 +48,16 @@ class PostsSeeder extends Seeder
             ],
             [
                 'user_id' => '3',
-                'category_id' => '3',
+                'category_id' => '1',
                 'title' => 'Post 5',
+                'poster' => 'dioses.png',
+                'habilitated' => '1',
+                'content' => 'Dioses los mejores',
+            ],
+            [
+                'user_id' => '3',
+                'category_id' => '3',
+                'title' => 'Post 6',
                 'poster' => 'dioses.png',
                 'habilitated' => '1',
                 'content' => 'Dioses los mejores',
