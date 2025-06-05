@@ -19,13 +19,13 @@
                             background-size: contain;
                             z-index: 0;">
                 </div>
-            {{--<div class="absolute top-0 bottom-0 right-0 w-40 pointer-events-none"
-                style="background-image: url('{{ asset('images/varias/columna2.png') }}');
+            <div class="absolute top-0 bottom-0 right-0 w-40 pointer-events-none"
+                style="background-image: url('{{ asset('images/varias/columna1.png') }}');
                         background-repeat: no-repeat;
                         background-position: right center;
                         background-size: contain;
                         z-index: 0;">
-            </div>--}}
+            </div>
         @yield('content')
         </main>
 

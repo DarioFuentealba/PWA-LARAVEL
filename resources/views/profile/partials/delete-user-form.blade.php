@@ -4,7 +4,7 @@
             {{ __('Eliminar cuenta') }}
         </h2>
 
-        <p class="mt-1 text-sm  text-[#f4f1ee]">
+        <p class="mt-1 text-sm text-[#f4f1ee]">
             {{ __('Una vez que se elimine su cuenta, todos sus recursos y datos se eliminarán de forma permanente. Antes de eliminar su cuenta, descargue cualquier dato o información que desee conservar..') }}
         </p>
     </header>
