@@ -13,6 +13,7 @@
         <x-slot name="title">Mitología {{ $category['name'] }}</x-slot>
         <x-slot name="image">{{ $category['image'] }}</x-slot>
         <x-slot name="content">{{ $category['content'] }}</x-slot>
+        <x-slot name="id">{{ $category['id'] }}</x-slot>
     </x-tarjeta.tarjeta>
 </div>
     @endforeach

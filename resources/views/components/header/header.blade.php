@@ -26,7 +26,7 @@
                     <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
                     
                     <!-- Mis posts -->
-                    <x-botones.boton-header texto="Mis Posts" onclick="window.location.href='{{ url('/category/userCategories') }}'" />
+                    <x-botones.boton-header texto="Mis Posts" onclick="window.location.href='{{ url('/post/userPosts') }}'" />
                     <!-- Perfil -->
                     <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
                     <!-- Cerrar sesion -->

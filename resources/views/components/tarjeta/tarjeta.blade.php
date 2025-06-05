@@ -10,6 +10,7 @@
         <p class="text-gray-700 text-base">{{ $content ?? 'Contenido'}}</p>
         <div >
        <a 
+       href="{{ url('/post/categories/' . $id) }}"
    class="cursor-pointer inline-block bg-[#c2b280] hover:bg-[#a99454] justify-center text-white font-bold py-2 px-4 rounded text-center">
    Ver posts
 </a>

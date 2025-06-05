@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <x-titulo.titulo>Categorías generales 
+    <x-titulo.titulo>Post de 
         <x-personajeDecorativo src="images/personajesDecorativos/dionisio.png" alt="dionisio" class="w-16 h-16 inline-block mr-2 align-middle" />
     </x-titulo.titulo>
 
