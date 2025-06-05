@@ -9,13 +9,11 @@
     <div class="cursor-default">
         <div class="max-w-xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-[#0d1b2a] rounded-lg">
-                <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-white">
-                    <img src="{{ asset('images/avatar/' . $user->avatar) }}" 
-                        alt="Avatar" 
-                        class="w-32 h-32 rounded-full object-cover border border-gray-300"/>
-                    {{--<img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 
+                <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-[#f4f1ee]">
+                    <!-- Imagen del avatar -->
+                    <img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 
                         alt="Borde decorativo" 
-                        class="w-45 h-64 object-cover border border-gray-300"/>--}}
+                        class="w-32 h-32 rounded-full object-cover border border-[#f4f1ee] bg-[#c2b280]"/>
                     <div class="space-y-2 text-left">
                         <p><strong>Nombre:</strong> {{ $user->name }}</p>
                         <p><strong>Email:</strong> {{ $user->email }}</p>

@@ -55,23 +55,11 @@
                             class="absolute opacity-0 peer"
                             {{ old('borde') == $borde ? 'checked' : '' }}>
                         <img src="{{ asset('images/bordeDecorativo/' . $borde) }}"
-                            class="w-24 border-4 rounded transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
+                            class="w-24 border-4 rounded-full transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
                     </label>
                 @endforeach
             </div>
 
-            <!-- Avatar -->
-            <div class="flex gap-4">
-                @foreach(['avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png'] as $avatar)
-                    <label class="cursor-pointer relative group">
-                        <input type="radio" name="avatar" value="{{ $avatar }}"
-                            class="absolute opacity-0 peer"
-                            {{ old('avatar') == $avatar ? 'checked' : '' }}>
-                        <img src="{{ asset('images/avatar/' . $avatar) }}"
-                            class="w-24 border-4 rounded transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
-                    </label>
-                @endforeach
-            </div>
 
 
             <div class="flex items-center justify-end mt-4">
