@@ -1,63 +1,20 @@
-<div class="relative min-h-[500px]">
-
-  <!-- Imagen superpuesta absoluta arriba -->
-  <img src="/images/varias/borde.png" alt="Borde decorativo"
-        class="absolute top-0 left-0 w-full h-[140%] object-contain z-50 pointer-events-none">
-
+<div class="relative w-64 mt-2">
   <!-- Contenedor de la tarjeta (queda debajo) -->
-  <div class="relative z-10 flex items-end justify-center min-h-[500px] py-12 top-40">
-    <div class="max-w-sm w-full bg-white rounded shadow-lg">
-      <img class="w-full" src="images/tarjetas/{{ $image ?? 'romana.png' }}" alt="{{ $textoImagen ?? 'Imagen' }}">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ $title ?? 'Titulo'}}</div>
+  <div class="flex items-end justify-center ">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden h-[400px] flex flex-col">
+      <div class="h-[70%]">
+      <img class="w-full h-full object-cover min-w-[220px] max-w-[220px] min-h-[280px] max-h-[280px]" src="images/tarjetas/{{ $image ?? 'romana.png' }}" alt="{{ $textoImagen ?? 'Imagen' }}">
+      </div>
+      <div class="h-[30%] px-4 py-2 flex flex-col justify-between">
+        <div class="font-bold text-sm mb-1">{{ $title ?? 'Titulo'}}</div>
         <p class="text-gray-700 text-base">{{ $content ?? 'Contenido'}}</p>
+        <div >
+       <a 
+   class="cursor-pointer inline-block bg-[#c2b280] hover:bg-[#a99454] justify-center text-white font-bold py-2 px-4 rounded text-center">
+   Ver posts
+</a>
       </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
       </div>
     </div>
   </div>
-
 </div>
-
-
-{{--<div>
-  <!-- Imagen con posición y z-index alto -->
-  <img src="/images/varias/borde.png" alt="Borde decorativo" 
-        class="w-full relative z-50">
-  
-  <div class="relative z-10 bg-[url('/images/varias/borde.png')] bg-no-repeat bg-center bg-contain min-h-[500px] flex items-end justify-center py-12">
-    <!-- Tarjeta -->
-    <div class="max-w-sm w-full bg-white rounded shadow-lg">
-      <img class="w-full" src="images/tarjetas/{{ $image }}" alt="{{ $textoImagen ?? 'Imagen' }}">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ $title }}</div>
-        <p class="text-gray-700 text-base">{{ $content }}</p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-      </div>
-    </div>
-  </div>
-</div>--}}
-
-
-
-
-{{--<div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src='images/tarjetas/{{ $image }}' alt="{{ $textoImagen ?? 'Imagen' }}">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">{{ $title }}</div>
-    <p class="text-gray-700 text-base">
-        {{ $content }}    </p>
-  </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div>--}}
