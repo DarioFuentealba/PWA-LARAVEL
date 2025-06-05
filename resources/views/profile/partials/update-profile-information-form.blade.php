@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-[#0d1b2a]">
-            {{ __('Profile Information') }}
+            {{ __('Información del perfil') }}
         </h2>
 
         <p class="mt-1 text-sm [#0d1b2a]">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Actualiza la información del perfil de tu cuenta y la dirección de correo electrónico.") }}
         </p>
     </header>
 
@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nombre')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
@@ -31,16 +31,16 @@
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
                     <p class="text-sm mt-2 text-[#0d1b2a]">
-                        {{ __('Your email address is unverified.') }}
+                        {{ __('Tu dirección de correo electrónico no está verificada.') }}
 
                         <button form="send-verification" class="underline text-sm text-[#0d1b2a] hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0d1b2a]">
-                            {{ __('Click here to re-send the verification email.') }}
+                            {{ __('Haga clic aquí para reenviar el correo electrónico de verificación.') }}
                         </button>
                     </p>
 
                     @if (session('status') === 'verification-link-sent')
                         <p class="mt-2 font-medium text-sm text-green-600">
-                            {{ __('A new verification link has been sent to your email address.') }}
+                            {{ __('Se ha enviado un nuevo enlace de verificación a tu dirección de correo electrónico.') }}
                         </p>
                     @endif
                 </div>
@@ -87,7 +87,7 @@
         </div>--}}
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Guardar') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p

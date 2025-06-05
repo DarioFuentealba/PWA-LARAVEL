@@ -1,4 +1,4 @@
-<nav class="bg-[#0d1b2a] p-4 relative">
+<nav class="bg-[#0d1b2a] p-4 relative font-sans:'Instrument Sans">
     <input type="checkbox" id="menu-toggle" class="hidden peer" />
     <div class="flex justify-between items-center md:justify-start md:space-x-6">
         <a href="/" class="flex-shrink-0">
