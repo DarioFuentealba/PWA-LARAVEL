@@ -26,8 +26,6 @@
                 </div>
             </div>
 
-            <!-- Borde decorativo -->
-            <!-- Avatar -->
 
             <div class="p-4 sm:p-8 bg-[#6e1414] shadow sm:rounded-lg">
                 <div class="max-w-xl">

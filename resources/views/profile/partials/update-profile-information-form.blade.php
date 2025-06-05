@@ -47,11 +47,11 @@
             @endif
         </div>
 
-        <!-- Borde decorativo -->
+        <!-- Avatar -->
         <div>
             <div class="col-span-6 sm:col-span-4 p-4 sm:p-8 bg-[#c2b280] shadow sm:rounded-lg">
                 <label for="borde" class="text-lg font-medium text-[#0d1b2a] block">
-                    Elegí tu borde decorativo:
+                    Elegí tu avatar:
                 </label>
                 <div class="flex gap-4">
                     @foreach(['borde1.png', 'borde2.png', 'borde3.png', 'borde4.png', 'borde5.png', 'borde6.png'] as $borde)
@@ -60,27 +60,13 @@
                             class="absolute opacity-0 peer"
                             {{ old('borde', Auth::user()->borde ?? '') === $borde ? 'checked' : '' }}>
                         <img src="{{ asset('images/bordeDecorativo/' . $borde) }}"
-                        class="w-24 border-4 rounded transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
+                        class="w-24 border-4 rounded-full transition peer-checked:border-[#0d1b2a] group-hover:border-[#0d1b2a]">
                     </label>
                     @endforeach
                 </div>
             </div>
         </div>
 
-        <!-- Avatar -->
-        <div class="mt-6">
-            <label class="block text-[#0d1b2a] font-bold mb-2">Elegí un avatar:</label>
-            <div class="flex flex-wrap gap-4">
-                @foreach([
-                    'avatar1.png', 'avatar2.png', 'avatar3.png', 'avatar4.png', 'avatar5.png', 'avatar6.png', 'avatar7.png', 'avatar8.png', 'avatar9.png', 'avatar10.png', 'avatar11.png'
-                    ] as $avatar)
-                    <x-avatar.avatar
-                        src="{{ asset('images/avatar/' . $avatar) }}"
-                        :checked="auth()->user()->avatar === $avatar"
-                    />
-                @endforeach
-            </div>
-        </div>
 {{--
         <div>
             <div class="col-span-6 sm:col-span-4 p-4 sm:p-8 bg-[#c2b280] shadow sm:rounded-lg">
