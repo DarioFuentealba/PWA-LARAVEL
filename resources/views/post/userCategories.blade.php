@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-    <x-titulo.titulo>Categorías de {{ Auth::user()->name }}</x-titulo.titulo>
+    <x-titulo.titulo>Posts de {{ Auth::user()->name }}</x-titulo.titulo>
 
-    <h1 class="text-2xl font-bold mb-4">Mis Categorías</h1>
+    <h1 class="text-2xl font-bold mb-4">Mis Posts</h1>
 
     <a href="{{ url('/category/create') }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">
         Crear nuevo post
@@ -15,6 +15,6 @@
             <p>{{ $post->content }}</p>
         </div>
     @empty
-        <br><br><p>No tenés categorías.</p>
+        <br><br><p>No tenés posts.</p>
     @endforelse
 @endsection
