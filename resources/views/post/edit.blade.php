@@ -5,7 +5,7 @@
 
     <h1 class="text-2xl font-bold mb-4">Editar Post</h1>
 
-    <form method="POST" action="{{ url('/category/update/' . $post->id) }}" class="space-y-4">
+    <form method="POST" action="{{ url('/post/update/' . $post->id) }}" class="space-y-4">
         @csrf
         @method('PUT')
 

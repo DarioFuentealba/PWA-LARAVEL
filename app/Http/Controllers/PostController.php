@@ -26,12 +26,12 @@ class PostController extends Controller
         return view('post.index', compact('posts'));
     }
 
-    public function getUserCategories()
+    public function getUserPost()
     {
         $user = Auth::user(); // o simplemente Auth::id()
         $posts = Post::where('user_id', $user->id)->get();
 
-        return view('post.userCategories', compact('posts'));
+        return view('post.userPost', compact('posts'));
     }
     //Mostrar un post individual
     public function getShow($id)
