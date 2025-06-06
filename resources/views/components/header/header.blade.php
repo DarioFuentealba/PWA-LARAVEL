@@ -28,10 +28,7 @@
                     <!-- Inicio -->
                     <x-botones.boton-header texto="Inicio" onclick="window.location.href='{{ url('/') }}'" />
                     <!-- Posts Generales -->
-                    <x-botones.boton-header texto="Posts Generales" onclick="window.location.href='{{ url('/category') }}'" />
-                    <!-- Favoritos -->
-                    <x-botones.boton-header texto="Favoritos" onclick="window.location.href='{{ url('/favorites') }}'"></x-botones.boton-header>
-                    
+                    <x-botones.boton-header texto="Posts Generales" onclick="window.location.href='{{ url('/category') }}'" />   
                     <!-- Mis posts -->
                     <x-botones.boton-header texto="Mis Posts" onclick="window.location.href='{{ url('/post/userPosts') }}'" />
                     <!-- Perfil -->

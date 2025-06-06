@@ -69,8 +69,9 @@ class PostController extends Controller
     //Mostrar formulario de edición
     public function getEdit($id)
     {
+        $user = Auth::user(); // o simplemente Auth::id()
         $post = Post::findOrFail($id);
-        return view('post.edit', compact('post'));
+        return view('post.edit', compact('post', 'user'));
     }
 
     //Procesar actualización del post
@@ -79,11 +80,11 @@ class PostController extends Controller
         //Validación
         $request->validate([
             'user_id' => 'required',
+            'category' => 'required',
             'title' => 'required|max:255',
             'poster' => 'nullable|string',
             'content' => 'required',
             'habilitated' => 'required|boolean',
-            'category' => 'required',
         ]);
 
         $post = Post::findOrFail($id);
