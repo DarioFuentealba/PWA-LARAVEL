@@ -4,6 +4,13 @@
         <a href="/" class="flex-shrink-0">
             <x-logo.logo src="images/logo/logo5.png" alt="Logo de la página" class="w-20 h-20" tooltip="Inicio" />
         </a>
+        
+        {{-- Titulo en el header --}}
+        @guest
+            <x-titulo.titulo class="text-[#f4f1ee] absolute left-1/2 transform -translate-x-1/2 text-6xl mb-2 mt-0 ml-0">Mitoloblog</x-titulo.titulo>
+        @endguest
+
+
         <div class="hidden md:flex md:flex-row md:space-x-4 w-full items-center">
             @php
                 ob_start();
