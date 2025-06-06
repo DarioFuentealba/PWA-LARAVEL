@@ -65,4 +65,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php'; //Rutas de autenticación generadas por Breeze (login, register, etc.)
+require __DIR__ . '/auth.php'; //Rutas de autenticación generadas por Breeze (login, register, etc.)

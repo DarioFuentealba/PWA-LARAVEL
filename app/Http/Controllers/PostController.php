@@ -63,7 +63,9 @@ class PostController extends Controller
 
         Post::create($request->all());
 
-        return redirect('/post')->with('success', 'Post creado exitosamente.');
+        $user = Auth::user(); // o simplemente Auth::id()
+        $posts = Post::where('user_id', $user->id)->get();
+        return view('post.userPosts', compact('posts'));
     }
 
     //Mostrar formulario de edición
@@ -81,7 +83,7 @@ class PostController extends Controller
         //Validación
         $request->validate([
             'user_id' => 'required',
-            'category' => 'required',
+            'category_id' => 'required',
             'title' => 'required|max:255',
             'poster' => 'nullable|string',
             'content' => 'required',
@@ -91,7 +93,8 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->update($request->all());
 
-        return redirect('/post')->with('success', 'Post actualizado exitosamente.');
+        $post = Post::findOrFail($id);
+        return view('post.show', compact('post'));
     }
 
     //Eliminar un post
