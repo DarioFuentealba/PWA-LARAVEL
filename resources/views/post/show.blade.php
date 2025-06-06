@@ -5,7 +5,7 @@
     <div class=" max-w-4xl mx-auto p-6 bg-white rounded shadow-lg mt-10">
         <div class="flex flex-col md:flex-row gap-6">
             <div class="w-64">
-                <img src="{{ asset('images/tarjetas/' . ($post->poster ?: '.png')) }}"  class="w-full h-auto rounded-lg border" alt="imagen Post" >
+                <img src="{{ $post->poster ?? https://i0.wp.com/diazvillanueva.com/wp-content/uploads/2025/02/mitologia-academia-play.jpg?resize=678%2C381&ssl=1}}"  class="w-full h-auto rounded-lg border" alt="imagen Post" >
             </div>
             <div class="flex-1 flex flex-col justify-between">
                 <div class="mb-4">

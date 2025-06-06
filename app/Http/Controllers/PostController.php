@@ -69,9 +69,10 @@ class PostController extends Controller
     //Mostrar formulario de edición
     public function getEdit($id)
     {
+        $category = Category::all();
         $user = Auth::user(); // o simplemente Auth::id()
         $post = Post::findOrFail($id);
-        return view('post.edit', compact('post', 'user'));
+        return view('post.edit', compact('post', 'user', 'category'));
     }
 
     //Procesar actualización del post
