@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="min-h-[900px] ml-10">
-    <x-titulo.titulo>Categorías generales</x-titulo.titulo>
+    <x-titulo.titulo>Posts de {{ $categories->name }}</x-titulo.titulo>
 
     <h1 class="text-2xl font-bold mb-4 ml-56">Lista de Posts</h1>
 

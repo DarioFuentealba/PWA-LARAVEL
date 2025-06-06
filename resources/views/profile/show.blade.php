@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-
+<div class="min-h-[500px]">
     <x-titulo.titulo>Mi perfil 
         <x-personajeDecorativo src="images/personajesDecorativos/poseidon.png" alt="poseidon" class="w-16 h-16 inline-block mr-2 align-middle" />
     </x-titulo.titulo>
@@ -29,4 +29,6 @@
         </div>
     </div>
 
+</div>
+    
 @endsection

@@ -11,7 +11,6 @@
 
     <div class="relative flex-grow min-h-screen">
         <x-header.header></x-header.header>
-        <x-columnaAntorchas.columnaAntorchas src="images/varias/antorcha.png" ></x-columnaAntorchas.columnaAntorchas>
         <main class="relative z-10 p-6 pl-24 pr-24">
                 <div class="absolute top-0 bottom-0 left-0 w-40 pointer-events-none"
                     style="background-image: url('{{ asset('images/varias/columna2.png') }}');
@@ -21,7 +20,7 @@
                             z-index: 0;">
                 </div>
             <div class="absolute top-0 bottom-0 right-0 w-40 pointer-events-none"
-                style="background-image: url('{{ asset('images/varias/columna1.png') }}');
+                style="background-image: url('{{ asset('images/varias/columna2.png') }}');
                         background-repeat: no-repeat;
                         background-position: right center;
                         background-size: contain;
