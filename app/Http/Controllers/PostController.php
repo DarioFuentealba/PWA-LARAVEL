@@ -22,7 +22,8 @@ class PostController extends Controller
     public function getCategoryPost($category_id)
     {
         $posts = Post::where('category_id', '=', $category_id)->get();
-        return view('post.index', compact('posts'));
+        $categories = Category::findOrFail($category_id);
+        return view('post.index', compact('posts', 'categories'));
     }
 
     public function getUserPosts()
