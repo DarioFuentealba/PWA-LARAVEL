@@ -4,8 +4,8 @@
 <div class="min-h-[500px]">
     <div class=" max-w-4xl mx-auto p-6 bg-white rounded shadow-lg mt-10">
         <div class="flex flex-col md:flex-row gap-6">
-            <div class="flex-1">
-                <img src="images/tarjetas/{{ $post->poster }}"  class="w-full h-auto rounded border" alt="imagen Post" >
+            <div class="w-64">
+                <img src="{{ asset('images/tarjetas/' . ($post->poster ?: '.png')) }}"  class="w-full h-auto rounded-lg border" alt="imagen Post" >
             </div>
             <div class="flex-1 flex flex-col justify-between">
                 <div class="mb-4">
@@ -15,8 +15,8 @@
                     <p class="text-gray-700 mb-4 cursor-auto">{{ $post->content }}</p>
                 </div>
                 <div class="flex justify-end items-center gap-4 mb-4">
-                    <button class="p-2 rounded-full"><img class=" w-8 h-8" src="https://images.icon-icons.com/1759/PNG/512/4124809-confirm-hand-sign-like-ok-thumbs-up_113906.png"/> </button>
-                    <button class="p-2 rounded-full"> <img class="w-8 h-8 " src="https://images.icon-icons.com/631/PNG/512/social-dislike-thumb-down-hand-outlined-symbol_icon-icons.com_57976.png"/></button>
+                    <button class="p-2 rounded-full border border-green-400 bg-green-50 hover:bg-green-100 transition"><img class=" w-8 h-8" src="https://images.icon-icons.com/1580/PNG/512/2849826-finger-hand-interaction-interface-like-multimedia_107970.png"/> </button>
+                    <button class="p-2 rounded-full border border-red-400 bg-red-50 hover:bg-red-100 transition"> <img class="w-8 h-8 " src="https://images.icon-icons.com/1580/PNG/96/2849816-finger-hand-interface-like-multimedia_107969.png"/></button>
                 </div>
                 <!-- Si el usuario esta logueado y este es su post se muestra la edicion-->
                 <div class="flex justify-center mt-6 gap-4">

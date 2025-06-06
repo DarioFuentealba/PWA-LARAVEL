@@ -1,16 +1,12 @@
-<div class="relative min-h-[500px]">
-
-  <div class="relative z-10 flex items-end justify-center min-h-[500px] py-12 top-40">
-    <div class="max-w-sm w-full bg-white rounded shadow-lg">
-      <img class="w-full" src="{{ $image ?? 'romana.png' }}" alt="{{ $textoImagen ?? 'Imagen' }}">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ $title ?? 'Titulo'}}</div>
-        <p class="text-gray-700 text-base">{{ $content ?? 'Contenido'}}</p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-      </div>
+  <div class=" bg-white rounded-2xl shadow-md p-6 flex gap-6 w-full max-w-4xl mx-auto items-start">
+    <div class="flex-shrink-0">
+      <img class="w-28 h-28 rounded-full object-cover border border-gray-300" src="{{ $post->user_id->avatar_url ?? 'default-avatar.png' }}" alt="Avatar de {{ $post->user_id}}">
     </div>
+      <div class="flex-1 space-y-3">
+          <h2 class="text-xl font-bold bg-gray-100 rounded px-3 py-1 w-full">{{ $post->title }}</h2>
+        <p class="mt-2 bg-gray-100 rounded px-3 py-2 w-full">{{ Str::limit($post->content, 100) }}</p>
+      <div class="flex justify-center">
+        <a href="{{ url('/post/show/' . $post->id) }}" class="inline-block bg-[#c2b280] text-white px-4 py-2 rounded hover:bg-[#a99967]"> Ver post</a>
+      </div>
+      </div>
   </div>
-
-</div>
