@@ -1,6 +1,7 @@
-  <div class=" bg-white rounded-2xl shadow-md p-6 flex gap-6 w-full max-w-4xl mx-auto items-start">
+@props(['post'])
+<div class=" bg-white rounded-2xl shadow-md p-6 flex gap-6 w-full max-w-4xl mx-auto items-start">
     <div class="flex-shrink-0">
-      <img class="w-28 h-28 rounded-full object-cover border border-gray-300" src="{{ $post->user_id->avatar_url ?? 'default-avatar.png' }}" alt="Avatar de {{ $post->user_id}}">
+      <img class="w-28 h-28 rounded-full object-cover border border-gray-300" src="{{ asset('images/avatar/' . $post->user->avatar ?? 'default-avatar.png') }}" alt="Avatar de {{ $post->user_id}}">
     </div>
       <div class="flex-1 space-y-3">
           <h2 class="text-xl font-bold bg-gray-100 rounded px-3 py-1 w-full">{{ $post->title }}</h2>
