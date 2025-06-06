@@ -34,14 +34,14 @@
             </select>
         </div>
 
-        <div>
+        {{--<div>
             <label class="text-[#0d1b2a] block font-semibold">Categoria</label>
             <select name="category_id" class="px-2 py-1 border-[#0d1b2a] focus:border-[#0d1b2a] focus:ring-[#0d1b2a] rounded-md shadow-sm mt-1 block w-full">
                 @foreach ($category as $cat)
                 <option value="{{ $cat['id'] }}">{{ $cat->name }}</option>
                 @endforeach
             </select>
-        </div>
+        </div>--}}
 
         <div>
             <label class="text-[#0d1b2a] block font-semibold">Contenido</label>
