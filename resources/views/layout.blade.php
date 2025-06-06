@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Sitio Web</title>
+    <link rel="icon" type="image/png" href="images/iconos/laravel_icon.png">
     @vite('resources/css/app.css')
 </head>
 <body class="min-h-screen flex flex-col bg-cover bg-center  text-[#5C5C5C]" style="background-image: url('{{ asset('images/fondos/fondoMarmol.jpg') }}')">
