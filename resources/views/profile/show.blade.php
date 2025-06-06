@@ -11,7 +11,7 @@
             <div class="p-4 sm:p-8 bg-[#0d1b2a] rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0 text-[#f4f1ee]">
                     <!-- Imagen del avatar -->
-                    <img src="{{ asset('storage/images/bordeDecorativo/' . $user->borde) }}" 
+                    <img src="{{ asset('images/bordeDecorativo/' . $user->borde) }}" 
                         alt="Borde decorativo" 
                         class="w-32 h-32 rounded-full object-cover border border-[#f4f1ee] bg-[#c2b280]"/>
                     <div class="space-y-2 text-left">
