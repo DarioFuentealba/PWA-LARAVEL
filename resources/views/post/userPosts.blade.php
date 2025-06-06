@@ -12,13 +12,15 @@
     </a>
 
     @forelse($posts as $post)
-    <div>
-        <x-tarjeta.tarjeta>
-            <x-slot name="title">{{ $post->title }}</x-slot>
-            <x-slot name="image">{{ $post->poster }}</x-slot>
-            <x-slot name="content">{{ $post->content }}</x-slot>
-        </x-tarjeta.tarjeta>
-    </div>
+
+
+        <div> 
+            <a href="{{ url('/post/show/' . $post->id) }}">
+                <x-post.post :post="$post" />
+            </a>
+        </div>
+
+
 
     @empty
         <br><br><p>No tenés posts.</p>

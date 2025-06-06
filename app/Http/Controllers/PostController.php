@@ -5,24 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\Category;
-use App\Models\Session;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
 class PostController extends Controller
 {
     //Mostrar listado de posts
-    public function getIndex($id)
+    public function getIndex()
     {
         $posts = Post::all();
-
-        return view('post.index', compact('posts'));
+        $users = User::all();
+        return view('post.index', compact('posts', 'users'));
     }
 
     public function getCategoryPost($category_id)
     {
         $posts = Post::where('category_id', '=', $category_id)->get();
-
         return view('post.index', compact('posts'));
     }
 
@@ -30,7 +29,6 @@ class PostController extends Controller
     {
         $user = Auth::user(); // o simplemente Auth::id()
         $posts = Post::where('user_id', $user->id)->get();
-
         return view('post.userPosts', compact('posts'));
     }
     //Mostrar un post individual
@@ -44,8 +42,8 @@ class PostController extends Controller
     public function getCreate()
     {
         $category = Category::all();
-        $session = Session::all();
-        return view('post.create', compact('category', 'session'));
+        $user = Auth::user(); // o simplemente Auth::id()
+        return view('post.create', compact('category', 'user'));
     }
 
     //Procesar creación del post

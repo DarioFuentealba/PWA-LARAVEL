@@ -11,10 +11,8 @@
             <form method="POST" action="{{ url('/post/store') }}" class="space-y-4">
                 @csrf
                 <div>
-                    <label class="text-[#0d1b2a] block font-semibold">Autor</label>
-                    @foreach ($session as $user)
-                    <input type="text" name="user_id" class="px-2 py-1 border-[#0d1b2a] focus:border-[#0d1b2a] focus:ring-[#0d1b2a] rounded-md shadow-sm mt-1 block w-full" value="{{ $user['user_id'] }}">
-                    @endforeach
+                    <label class="text-[#0d1b2a] block font-semibold">Autor {{ $user->name }}</label>
+                    <input type="text" name="user_id" class="hidden px-2 py-1 border-[#0d1b2a] focus:border-[#0d1b2a] focus:ring-[#0d1b2a] rounded-md shadow-sm mt-1 block w-full" value="{{ $user->id }}">
                 </div>
 
                 <div>
