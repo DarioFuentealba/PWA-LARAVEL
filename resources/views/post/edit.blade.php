@@ -1,14 +1,20 @@
 @extends('layout')
 
 @section('content')
-<x-guest-layout>
-    <x-titulo.titulo>Editar post</x-titulo.titulo>
+    <x-titulo.titulo>Editar post
+                <x-personajeDecorativo src="images/personajesDecorativos/guerrera-griega.png" alt="Herrero" class="w-16 h-16 inline-block mr-2 align-middle" />
+    </x-titulo.titulo>
 
-    <h1 class="text-2xl font-bold mb-4">Editar Post</h1>
+<x-guest-layout>
 
     <form method="POST" action="{{ url('/post/update/' . $post->id) }}" class="space-y-4">
         @csrf
         @method('PUT')
+
+            <div>
+                <label class="text-[#0d1b2a] block font-semibold">Autor {{ $user->name }}</label>
+                <input type="text" name="user_id" class="hidden px-2 py-1 border-[#0d1b2a] focus:border-[#0d1b2a] focus:ring-[#0d1b2a] rounded-md shadow-sm mt-1 block w-full" value="{{ $user->id }}">
+            </div>
 
         <div>
             <label class="text-[#0d1b2a] block font-semibold">Título</label>
