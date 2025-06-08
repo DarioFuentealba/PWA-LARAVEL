@@ -1,5 +1,5 @@
 @props(['post'])
-<div class=" bg-white rounded-2xl shadow-md p-6 flex gap-6 w-full max-w-4xl mx-auto items-start">
+<div class=" {{ $post->habilitated ? 'bg-white' : 'bg-red-300' }} rounded-2xl shadow-md p-6 flex gap-6 w-full max-w-4xl mx-auto items-start">
     <div class="flex-shrink-0">
       <img class="w-28 h-28 rounded-full object-cover border border-gray-300" src="{{ asset('images/avatar/' . $post->user->avatar ?? 'default-avatar.png') }}" alt="Avatar de {{ $post->user_id}}">
     </div>

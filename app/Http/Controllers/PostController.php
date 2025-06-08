@@ -14,14 +14,16 @@ class PostController extends Controller
     //Mostrar listado de posts
     public function getIndex()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::orderBy('id', 'desc')->paginate(5);
         $users = User::all();
         return view('post.index', compact('posts', 'users'));
     }
 
     public function getCategoryPost($category_id)
     {
-        $posts = Post::where('category_id', '=', $category_id)->paginate(5);
+        $posts = Post::where('category_id', '=', $category_id)
+                    ->orderBy('id', 'desc')
+                    ->paginate(5);
         $categories = Category::findOrFail($category_id);
         return view('post.index', compact('posts', 'categories'));
     }
@@ -29,7 +31,9 @@ class PostController extends Controller
     public function getUserPosts()
     {
         $user = Auth::user(); // o simplemente Auth::id()
-        $posts = Post::where('user_id', $user->id)->paginate(5);
+        $posts = Post::where('user_id', $user->id)
+                    ->orderBy('id', 'desc')
+                    ->paginate(5);
         return view('post.userPosts', compact('posts'));
     }
     //Mostrar un post individual
@@ -64,7 +68,9 @@ class PostController extends Controller
         Post::create($request->all());
 
         $user = Auth::user(); // o simplemente Auth::id()
-        $posts = Post::where('user_id', $user->id)->get();
+        $posts = Post::where('user_id', $user->id)
+                    ->orderBy('id', 'desc')
+                    ->get();
         return view('post.userPosts', compact('posts'));
     }
 
