@@ -19,33 +19,39 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name' => 'Fuentes camila',
-                'avatar' => 'avatar1.png',
+                'borde' => 'borde1.png',
                 'email' => 'camila@example.com',
                 'password' => Hash::make('11111111'),
             ],
             [
                 'name' => 'Riveiro Matias',
-                'avatar' => 'avatar2.png',
+                'borde' => 'borde2.png',
                 'email' => 'matias@example.com',
                 'password' => Hash::make('22222222'),
             ],
             [
                 'name' => 'Fuentealaba Dario',
-                'avatar' => 'avatar3.png',
+                'borde' => 'borde3.png',
                 'email' => 'dario@example.com',
                 'password' => Hash::make('33333333'),
             ],
             [
                 'name' => 'Carlos Ruiz',
-                'avatar' => 'avatar11.png',
+                'borde' => 'borde4.png',
                 'email' => 'carlos@example.com',
                 'password' => Hash::make('44444444'),
             ],
             [
                 'name' => 'capo',
-                'avatar' => 'avatar6.png',
+                'borde' => 'borde5.png',
                 'email' => 'c@c.c',
-                'password' => Hash::make('ccc555555'),
+                'password' => Hash::make('55555555'),
+            ],
+            [
+                'name' => 'Camilo Milo',
+                'borde' => 'borde6.png',
+                'email' => 'c@m.c',
+                'password' => Hash::make('66666666'),
             ],
         ];
 

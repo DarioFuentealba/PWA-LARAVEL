@@ -31,13 +31,19 @@
                     <x-botones.boton-header texto="Posts Generales" onclick="window.location.href='{{ url('/category') }}'" />   
                     <!-- Mis posts -->
                     <x-botones.boton-header texto="Mis Posts" onclick="window.location.href='{{ url('/post/userPosts') }}'" />
-                    <!-- Perfil -->
-                    <x-botones.boton-header texto="Perfil" onclick="window.location.href='{{ route('profile.show') }}'" />
                     <!-- Cerrar sesion -->
                     <x-botones.boton-sesion 
                         imagenUrl="https://images.icon-icons.com/2518/PNG/512/logout_icon_151219.png" tooltip="Logout" 
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     </x-botones.boton-sesion>
+                    <!-- Ver perfil -->
+                    <x-botones.boton-perfil 
+                        :user="Auth::user()"
+                        tooltip="Ver Perfil"
+                        onclick="window.location.href='{{ route('profile.show') }}'">
+                        <x-botones.boton-header texto="Ver Perfil" />
+                    </x-botnes.boton-perfil>
+
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                         @csrf
