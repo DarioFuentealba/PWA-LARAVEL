@@ -11,13 +11,13 @@ class CategoryController extends Controller
 {
     //Mostrar listado de posts
     public function getIndex(){
-        $posts = Post::all();
+        $posts = Post::paginate(5);
         return view('category.index', compact('posts'));
     }
 
     public function getUserCategories(){
         $user = Auth::user(); // o simplemente Auth::id()
-        $posts = Post::where('user_id', $user->id)->get();
+        $posts = Post::where('user_id', $user->id)->paginate(5);
 
         return view('category.userCategories', compact('posts'));
     }

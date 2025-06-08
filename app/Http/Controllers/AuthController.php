@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     public function getLogin(){
-        $posts = Post::all();
+        $posts = Post::paginate(5);
         return view('login', compact('posts'));
     }
     public function getLogout(){

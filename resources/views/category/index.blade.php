@@ -16,4 +16,7 @@
         </div>
         @endforeach
     </ul>
+    <div class="mt-6">
+        {{ $posts->links() }}
+    </div>
 @endsection

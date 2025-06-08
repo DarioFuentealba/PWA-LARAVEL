@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="min-h-[900px] ml-10">
+<div class="min-h-[500px] ml-10">
     <x-titulo.titulo>Posts de {{ $categories->name }}</x-titulo.titulo>
 
     <h1 class="text-2xl font-bold mb-4 ml-56">Lista de Posts</h1>
@@ -14,5 +14,8 @@
             </a>
         </div>
         @endforeach
+        <div class="mt-6">
+        {{ $posts->links() }}
+    </div>
 </div>
 @endsection

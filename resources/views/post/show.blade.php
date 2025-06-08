@@ -2,17 +2,19 @@
 
 @section('content')
 <div class="min-h-[500px]">
-    <div class=" max-w-4xl mx-auto p-6 bg-white rounded shadow-lg mt-10">
+    <div class="  max-w-4xl mx-auto p-6 bg-white rounded shadow-lg mt-10">
         <div class="flex flex-col md:flex-row gap-6">
             <div class="w-64">
                 <img src="{{ Str::startsWith($post->poster, ['http://', 'https://']) ? $post->poster : asset('images/tarjetas/' . ($post->poster ?: 'default.png')) }}"  class="w-full h-auto rounded-lg border" alt="imagen Post" >
             </div>
             <div class="flex-1 flex flex-col justify-between">
-                <div class="mb-4">
+                <div class="mb-4 cursor-default">
                     <x-titulo.titulo>{{ $post->title }}</x-titulo.titulo>
                 </div>
                 <div class="mb-6 flex-1">
-                    <p class="text-gray-700 mb-4 cursor-auto">{{ $post->content }}</p>
+                    <p class="cursor-default "> Escrito por {{ $post->user->name }} </p>
+                    <br>
+                    <p class="text-gray-700 mb-4 cursor-default">{{ $post->content }}</p>
                 </div>
                 <div class="flex justify-end items-center gap-4 mb-4">
                     <button class="p-2 rounded-full border border-green-400 bg-green-50 hover:bg-green-100 transition"><img class=" w-8 h-8" src="https://images.icon-icons.com/1580/PNG/512/2849826-finger-hand-interaction-interface-like-multimedia_107970.png"/> </button>

@@ -14,7 +14,7 @@ class PostController extends Controller
     //Mostrar listado de posts
     public function getIndex()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(5);
         $users = User::all();
         return view('post.index', compact('posts', 'users'));
     }
@@ -29,7 +29,7 @@ class PostController extends Controller
     public function getUserPosts()
     {
         $user = Auth::user(); // o simplemente Auth::id()
-        $posts = Post::where('user_id', $user->id)->get();
+        $posts = Post::where('user_id', $user->id)->paginate(5);
         return view('post.userPosts', compact('posts'));
     }
     //Mostrar un post individual
