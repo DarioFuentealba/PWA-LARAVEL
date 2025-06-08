@@ -6,7 +6,7 @@
             <div class="flex flex-col justify-center md:items-start items-center text-center md:text-left space-y-1">
                 <p class="cursor-default hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]">Desde 2022</p>
                 <p class="cursor-default hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]">Neuquen, Argentina</p>
-                <p class="cursor-default text-[#c2b280] font-semibold hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]">Blog de unicornios</p>
+                <p class="cursor-default text-[#c2b280] font-semibold hover:[text-shadow:0_0_4px_#c2b280,0_0_8px_#c2b280]">Mitoloblog</p>
             </div>
 
             <!-- Columna centro -->

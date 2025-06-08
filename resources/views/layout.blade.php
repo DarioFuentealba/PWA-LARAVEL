@@ -28,7 +28,7 @@
             </div>
         @yield('content')
         </main>
-
+    <x-botones.ir-atras></x-botones.ir-atras>
     </div>
 
     <x-botones.boton-ir-arriba></x-botones.boton-ir-arriba>
