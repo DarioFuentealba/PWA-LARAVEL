@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-    
-    <x-titulo.titulo>Iniciar sesión 
+    <div class="min-h-[500px]">
+        <x-titulo.titulo>Iniciar sesión 
         <x-personajeDecorativo src="images/personajesDecorativos/hermes.png" alt="Hermes" class="w-16 h-16 inline-block mr-2 align-middle" />
     </x-titulo.titulo>
 
@@ -53,5 +53,7 @@
             </div>
         </form>
     </x-guest-layout>
+    </div>
+    
     
 @endsection

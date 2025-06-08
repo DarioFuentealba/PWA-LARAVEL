@@ -17,7 +17,7 @@ class CategoriesSeeder extends Seeder
             [
                 'name' => 'Dioses',
                 'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
+                'content' => 'Los poderosos del Olimpo',
             ],
             [
                 'name' => 'Diosas',
@@ -26,18 +26,18 @@ class CategoriesSeeder extends Seeder
             ],
             [
                 'name' => 'SemiDioses',
-                'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
+                'image' => 'hercules.jpg',
+                'content' => 'Hijos de dioses y humanos',
             ],
             [
                 'name' => 'Heroes',
-                'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
+                'image' => 'teseo.jpg',
+                'content' => 'Valientes mortales',
             ],
             [
-                'name' => 'Mounstros',
-                'image' => 'dioses.png',
-                'content' => 'Dioses los mejores',
+                'name' => 'Monstruos',
+                'image' => 'kraken-gigante.jpg',
+                'content' => 'Criaturas temibles',
             ],
         ];
 
