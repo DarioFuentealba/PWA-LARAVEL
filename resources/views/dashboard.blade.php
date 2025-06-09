@@ -22,8 +22,8 @@
 
     <div class="relative z-10">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-green-500 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 text-2xl">
+            <div class="bg-[#c2b280] overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-[#0d1b2a] text-center text-2xl">
                     <p>Esta es la pagina principal de nuestro blog    </p>  <br>
                     <p>Desde aqui podras ver tus blog y editarlos</p><br>
                     <p>También conocer y leer los blog de los demas integrantes de MitoloBlog</p><br>
