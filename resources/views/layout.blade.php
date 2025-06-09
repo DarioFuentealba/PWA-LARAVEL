@@ -28,7 +28,10 @@
             </div>
         @yield('content')
         </main>
-    <x-botones.ir-atras></x-botones.ir-atras>
+        
+        @unless (Route::currentRouteName() === 'home')
+            <x-botones.ir-atras />
+        @endunless
     </div>
 
     <x-botones.boton-ir-arriba></x-botones.boton-ir-arriba>

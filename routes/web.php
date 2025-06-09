@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\PostVoteController;
 //Rutas propias
-Route::get('/', HomeController::class); //Usa el método __invoke automáticamente
+Route::get('/', HomeController::class)->name('home'); //Usa el método __invoke automáticamente
 
 //Route::get('/register', [RegisterController::class]);
 //Route::get('/login-custom', [AuthController::class, 'getLogin']); //Cuidado: Breeze ya usa /login
