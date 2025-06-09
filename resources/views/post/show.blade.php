@@ -49,7 +49,7 @@
                         Editar
                     </a>
 
-                    <form method="POST" action="{{ url('/post/delete/' . $post->id) }}" class="inline-block ml-2">
+                    <form method="POST" action="{{ url('/post/destroy/' . $post->id) }}" class="inline-block ml-2">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded">

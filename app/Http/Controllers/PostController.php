@@ -78,7 +78,7 @@ class PostController extends Controller
         $user = Auth::user(); // o simplemente Auth::id()
         $posts = Post::where('user_id', $user->id)
                     ->orderBy('id', 'desc')
-                    ->get();
+                    ->paginate(5);
         return view('post.userPosts', compact('posts'));
     }
 
@@ -117,6 +117,6 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->delete();
 
-        return redirect('/post')->with('success', 'Post eliminado exitosamente.');
+        return redirect('/post/userPosts')->with('success', 'Post eliminado exitosamente.');
     }
 }
