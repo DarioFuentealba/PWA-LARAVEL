@@ -20,6 +20,10 @@ class Post extends Model
         'habilitated',
     ];
 
+        public function votes(){
+            return $this->hasMany(PostVote::class);
+        }
+
         public function user(){
         return $this->belongsTo(User::class);
     }

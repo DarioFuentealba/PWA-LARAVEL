@@ -9,7 +9,7 @@ use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisteredUserController;
-
+use App\Http\Controllers\PostVoteController;
 //Rutas propias
 Route::get('/', HomeController::class); //Usa el método __invoke automáticamente
 
@@ -64,5 +64,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::post('/post/vote', [PostVoteController::class, 'postVote'])->name('post.vote')->middleware('auth');
 
 require __DIR__ . '/auth.php'; //Rutas de autenticación generadas por Breeze (login, register, etc.)

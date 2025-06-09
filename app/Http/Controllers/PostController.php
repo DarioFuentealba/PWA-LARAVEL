@@ -40,7 +40,15 @@ class PostController extends Controller
     public function getShow($id)
     {
         $post = Post::findOrFail($id);
-        return view('post.show', compact('post'));
+        $likes = $post->votes()->where('vote', 1)->count();
+        $dislikes = $post->votes()->where('vote', -1)->count();
+
+        $userVote = null;
+        if (Auth::check()) {
+            $userVote = $post->votes()->where('user_id', Auth::id())->value('vote');
+        }
+
+        return view('post.show', compact('post', 'likes', 'dislikes', 'userVote'));
     }
 
     //Mostrar formulario de creación

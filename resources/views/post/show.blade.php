@@ -17,8 +17,30 @@
                     <p class="text-gray-700 mb-4 cursor-default">{{ $post->content }}</p>
                 </div>
                 <div class="flex justify-end items-center gap-4 mb-4">
-                    <button class="p-2 rounded-full border border-green-400 bg-green-50 hover:bg-green-100 transition"><img class=" w-8 h-8" src="https://images.icon-icons.com/1580/PNG/512/2849826-finger-hand-interaction-interface-like-multimedia_107970.png"/> </button>
-                    <button class="p-2 rounded-full border border-red-400 bg-red-50 hover:bg-red-100 transition"> <img class="w-8 h-8 " src="https://images.icon-icons.com/1580/PNG/96/2849816-finger-hand-interface-like-multimedia_107969.png"/></button>
+                    @auth
+                    <form action="{{ route('post.vote') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+                        <input type="hidden" name="vote" value="1">
+                        <button type="submit"
+                    class="p-2 rounded-full border {{ ($userVote ?? null) === 1 ? 'bg-green-200' : 'bg-green-50' }} hover:bg-green-100 transition">
+                            <img class="w-8 h-8" src="https://images.icon-icons.com/1580/PNG/512/2849826-finger-hand-interaction-interface-like-multimedia_107970.png"/>
+                        </button>
+                        <span class="text-green-600 font-semibold ml-1">{{ $likes ?? 0 }}</span>
+                    </form>
+
+                    <form action="{{ route('post.vote') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="post_id" value="{{ $post->id }}">
+                        <input type="hidden" name="vote" value="-1">
+                        <button type="submit" class="p-2 rounded-full border {{ ($userVote ?? null) === -1 ? 'bg-red-200' : 'bg-red-50' }} hover:bg-red-100 transition">
+                            <img class="w-8 h-8" src="https://images.icon-icons.com/1580/PNG/96/2849816-finger-hand-interface-like-multimedia_107969.png"/>
+                        </button>
+                        <span class="text-red-600 font-semibold ml-1">{{ $dislikes ?? 0 }}</span>
+                    </form>
+                    @else
+                    <span class="text-gray-500">Iniciá sesión para votar</span>
+                    @endauth
                 </div>
                 <!-- Si el usuario esta logueado y este es su post se muestra la edicion-->
                 <div class="flex justify-center mt-6 gap-4">
